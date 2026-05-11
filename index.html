@@ -1,213 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barinder Singh</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Barinderpal Singh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* =====================
-       THEME VARIABLES
-    ====================== */
-    :root {
-      --bg: #0e1117;
-      --text: #f5f1e8;
-      --muted: #9aa0a6;
-      --gold: #c9a24d;
-      --card: #151922;
-    }
-
-    body.light {
-      --bg: #f5f1e8;
-      --text: #0e1117;
-      --muted: #555;
-      --gold: #8a6a2f;
-      --card: #ffffff;
-    }
-
-    /* =====================
-       BASE STYLES
-    ====================== */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      transition: background 0.3s ease, color 0.3s ease;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 3rem 1.5rem;
+      background: #ffffff;
+      padding: 40px;
+      max-width: 700px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
-    /* =====================
-       HEADER / HERO
-    ====================== */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 2rem;
-      position: relative;
-    }
-
-    .hero-text {
-      flex: 1;
+    img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      margin: 10px 0;
+      font-size: 32px;
     }
 
-    .tagline {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 600px;
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 15px;
     }
 
-    .hero-photo img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--gold);
-    }
-
-    /* =====================
-       TOGGLE BUTTON
-    ====================== */
-    .theme-toggle {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: none;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      padding: 6px 12px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 0.9rem;
-    }
-
-    .theme-toggle:hover {
-      background: var(--gold);
-      color: #000;
-    }
-
-    /* =====================
-       CARDS / SECTIONS
-    ====================== */
-    section {
-      margin-top: 3rem;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-      color: var(--gold);
-      font-size: 1.4rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.6rem;
-    }
-
-    /* =====================
-       FOOTER
-    ====================== */
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .tags {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 
 <body>
   <div class="container">
+    <img src="1773851472241.jpg" alt="Barinderpal Singh">
 
-    <header>
-      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    <h1>Barinderpal Singh</h1>
 
-      <div class="hero-text">
-        <h1>Barinder Singh</h1>
-        <p class="tagline">
-          Experienced Data Analyst | AI-Driven Insights & Ad Operations | Father | Husband | Spiritually Grounded | Advocating Insaniyat (Light of Humanity) | Purpose Over Profit 🌟
-        </p>
-      </div>
+    <p>
+      Experienced Data Analyst | AI-Driven Insights & Ad Operations | Father | Husband |
+      Spiritually Grounded | Advocating Insaniyat (Light of Humanity)
+    </p>
 
-      <div class="hero-photo">
-        <img src="1773851472241.jpg" alt="Barinder Singh">
-      </div>
-    </header>
-
-    <section class="card">
-      <h2>About</h2>
-      <p>
-        I combine data, AI, and ethical leadership to drive meaningful outcomes. My work is guided by clarity, compassion, and the belief that technology should serve humanity.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Core Focus</h2>
-      <ul>
-        <li>Data Analytics & Visualization</li>
-        <li>AI-Driven Decision Making</li>
-        <li>Advertising Operations</li>
-        <li>Leadership with Purpose</li>
-      </ul>
-    </section>
-
-    <footer>
-      © 2026 Barinder Singh · Light of Humanity
-    </footer>
-
+    <div class="tags">
+      #Insaniyat #LightOfHumanity #AI #Leadership
+    </div>
   </div>
-
-  <script>
-    const body = document.body;
-    const btn = document.querySelector('.theme-toggle');
-
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.add('light');
-      btn.textContent = '☀️';
-    }
-
-    function toggleTheme() {
-      body.classList.toggle('light');
-      if (body.classList.contains('light')) {
-        localStorage.setItem('theme', 'light');
-        btn.textContent = '☀️';
-      } else {
-        localStorage.setItem('theme', 'dark');
-        btn.textContent = '🌙';
-      }
-    }
-  </script>
 </body>
 </html>
