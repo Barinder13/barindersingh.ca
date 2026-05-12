@@ -17,6 +17,19 @@
       --card-bg: #13130f;
       --border: rgba(201,168,76,0.25);
     }
+    {
+  --bg: #0d0d0e;
+  --text: #f8f5ef;
+}
+
+[data-theme="light"] {
+  --ink: #f6f6f4;
+  --cream: #0d0d0e;
+  --muted: #555;
+  --card-bg: #ffffff;
+  background: #f6f6f4;
+  color: #0d0d0e;
+}
 
     html { scroll-behavior: smooth; }
 
@@ -52,6 +65,15 @@
       border-bottom: 1px solid var(--border);
       transition: padding 0.3s ease;
     }
+    <button id="themeToggle" style="
+  background:none;
+  border:1px solid var(--border);
+  color:var(--gold);
+  padding:0.4rem 0.6rem;
+  cursor:pointer;
+  font-size:0.9rem;">
+  ☾
+</button>
 
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
@@ -886,5 +908,84 @@
       setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; }, 3000);
     }
   </script>
+  <script>
+const toggle = document.getElementById('themeToggle');
+toggle.addEventListener('click', () => {
+  document.documentElement.toggleAttribute('data-theme');
+  toggle.textContent =
+    document.documentElement.hasAttribute('data-theme') ? '☀' : '☾';
+});
+</script>
+  nav.shrink {
+  padding: 0.7rem 4rem;
+  background: rgba(13,13,14,0.9);
+}
+  <script>
+window.addEventListener('scroll', () => {
+  document.querySelector('nav')
+    .classList.toggle('shrink', window.scrollY > 40);
+});
+</script>
+  <script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+  .hero-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.08);
+  opacity:0;
+  transition:opacity 0.3s;
+}
+
+.hero-cta:hover::after {
+  opacity:1;
+}
+  <button id="menuBtn" class="menu-btn">☰</button>
+  .menu-btn {
+  display:none;
+  background:none;
+  color:var(--cream);
+  border:none;
+  font-size:1.6rem;
+}
+
+@media(max-width:768px){
+  .menu-btn { display:block; }
+  .nav-links {
+    position:fixed;
+    inset:0;
+    background:var(--ink);
+    flex-direction:column;
+    justify-content:center;
+    transform:translateY(-100%);
+    transition:0.4s;
+  }
+  .nav-links.open {
+    transform:translateY(0);
+  }
+}
+  <script>
+document.getElementById('menuBtn').onclick = () =>
+  document.querySelector('.nav-links').classList.toggle('open');
+</script>
+  <script>
+function handleSubmit(e){
+  e.preventDefault();
+  alert("Thank you! Your message has been received.");
+  e.target.reset();
+}
+</script>
 </body>
 </html>
