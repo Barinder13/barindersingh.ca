@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AI with Insaniyat | Light of Humanity</title>
+
+    <style>
+        :root {
+            --dark-bg: #020617;
+            --light-bg: #f8fafc;
+            --dark-text: #020617;
+            --light-text: #e5e7eb;
+            --accent: #22c55e;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        body.light {
+            background: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        header {
+            padding: 70px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #0f172a);
+        }
+
+        body.light header {
+            background: linear-gradient(135deg, #e2e8f0, #ffffff);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        header p {
+            max-width: 780px;
+            margin: auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            border-radius: 20px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.06);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        body.light .card {
+            background: #ffffff;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card div {
+            padding: 22px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+
+<header>
+    <h1>AI with Insaniyat</h1>
+    <p>
+        Artificial Intelligence is powerful — but without humanity,
+        it is incomplete. True progress happens when technology
+        serves people with empathy, ethics, and responsibility.
+    </p>
+</header>
+
+<section>
+    <h2>🤖 Technology with a Human Core</h2>
+    <p>
+        AI should amplify human potential, not replace human values.
+        Insaniyat ensures that innovation remains aligned with compassion,
+        fairness, and the greater good of society.
+    </p>
+</section>
+
+<section>
+    <h2>📸 AI Guided by Humanity</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1581091215367-59ab6c53f2e4" alt="Ethical AI">
+            <div>
+                <h3>Ethics</h3>
+                <p>Building systems that respect privacy, dignity, and fairness.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a" alt="Human AI collaboration">
+            <div>
+                <h3>Collaboration</h3>
+                <p>AI working alongside humans — enhancing creativity and decision-making.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Future technology">
+            <div>
+                <h3>Responsibility</h3>
+                <p>Designing for long-term impact, not short-term gains.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>🌱 The Future We Choose</h2>
+    <p>
+        The future of AI is not just about speed or intelligence —
+        it is about intention. When guided by Insaniyat,
+        AI becomes a force for inclusion, empowerment, and hope.
+    </p>
+</section>
+
+<footer>
+    © 2026 • AI with Insaniyat — Technology in Service of Humanity
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+    }
+</script>
+
+</body>
+</html>
