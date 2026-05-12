@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Website with Purpose | Insaniyat</title>
+
+    <style>
+        :root {
+            --dark-bg: #020617;
+            --light-bg: #f8fafc;
+            --dark-text: #020617;
+            --light-text: #e5e7eb;
+            --accent: #a855f7;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        body.light {
+            background: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        header {
+            padding: 70px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #0f172a);
+        }
+
+        body.light header {
+            background: linear-gradient(135deg, #e2e8f0, #ffffff);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        header p {
+            max-width: 780px;
+            margin: auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            border-radius: 20px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.06);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        body.light .card {
+            background: #ffffff;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card div {
+            padding: 22px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+
+<header>
+    <h1>Website with Purpose</h1>
+    <p>
+        A website is more than code and design.
+        It is a reflection of values, intention, and the impact
+        you want to create in the world.
+    </p>
+</header>
+
+<section>
+    <h2>🌐 A Digital Home for Insaniyat</h2>
+    <p>
+        This website exists to share ideas rooted in humanity,
+        mindfulness, ethical technology, and purposeful living.
+        Every page is designed to inform, inspire, and connect.
+    </p>
+</section>
+
+<section>
+    <h2>📸 What a Purpose-Driven Website Represents</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Clean design">
+            <div>
+                <h3>Clarity</h3>
+                <p>Simple design that communicates clearly and honestly.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Connection">
+            <div>
+                <h3>Connection</h3>
+                <p>Bringing people together through shared values and ideas.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429" alt="Growth">
+            <div>
+                <h3>Growth</h3>
+                <p>A living platform that evolves with purpose and intention.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>🚀 Built for the Future</h2>
+    <p>
+        This website is designed to grow — from a single idea
+        into a complete ecosystem of content, insights, and action.
+        Technology is the tool. Humanity is the guide.
+    </p>
+</section>
+
+<footer>
+    © 2026 • Website with Purpose — An Insaniyat Platform
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+    }
+</script>
+
+</body>
+</html>
