@@ -3,8 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Barinderpal Singh</title>
 
+<title>Barinderpal Singh | Light of Humanity & AI Innovation</title>
+
+<!-- ================= SEO META ================= -->
+<meta name="description" content="Barinderpal Singh — Humanity-first digital creator offering AI solutions, web design, hosting, and purpose-driven technology. Based in Canada.">
+<meta name="keywords" content="Barinderpal Singh, Insaniyat, AI solutions, web design Canada, website hosting, digital innovation">
+<meta name="author" content="Barinderpal Singh">
+<meta name="robots" content="index, follow">
+
+<!-- ================= CANONICAL ================= -->
+<link rel="canonical" href="https://www.barindersingh.ca">
+
+<!-- ================= OPEN GRAPH ================= -->
+<meta property="og:title" content="Barinderpal Singh | Light of Humanity & AI Innovation">
+<meta property="og:description" content="Humanity-driven vision with AI-powered execution. Web, AI, and digital solutions built with purpose.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.barindersingh.ca">
+<meta property="og:image" content="https://www.barindersingh.ca/og-image.jpg">
+
+<!-- ================= TWITTER ================= -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Barinderpal Singh">
+<meta name="twitter:description" content="Light of Humanity meets AI innovation.">
+<meta name="twitter:image" content="https://www.barindersingh.ca/og-image.jpg">
+
+<!-- ================= STRUCTURED DATA ================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Barinderpal Singh",
+  "url": "https://www.barindersingh.ca",
+  "jobTitle": "Digital Strategist & AI Solutions Builder",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Surrey",
+    "addressRegion": "BC",
+    "addressCountry": "CA"
+  }
+}
+</script>
+
+<!-- ================= FONTS ================= -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -27,7 +68,7 @@ body{
   color:var(--cream);
 }
 
-/* ================== NAV ================== */
+/* NAV */
 nav{
   position:fixed;
   inset:0 0 auto 0;
@@ -35,11 +76,11 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  backdrop-filter:blur(20px);
+  backdrop-filter:blur(18px);
   background:rgba(13,13,14,.75);
   border-bottom:1px solid var(--border);
   z-index:1000;
-  transition:all .45s cubic-bezier(.22,1,.36,1);
+  transition:.45s cubic-bezier(.22,1,.36,1);
 }
 nav.shrink{padding:.8rem 4rem}
 
@@ -61,11 +102,11 @@ nav.shrink{padding:.8rem 4rem}
   font-size:.75rem;
   letter-spacing:.22em;
   opacity:.75;
-  transition:opacity .3s ease,color .3s ease;
+  transition:.3s;
 }
 .nav-links a:hover{opacity:1;color:var(--gold)}
 
-/* ================== HERO ================== */
+/* HERO */
 #home{
   min-height:100vh;
   display:flex;
@@ -74,13 +115,12 @@ nav.shrink{padding:.8rem 4rem}
   align-items:center;
   text-align:center;
   padding:8rem 2rem;
-  overflow:hidden;
 }
 
 .hero-tag{
-  font-size:.75rem;
-  letter-spacing:.3em;
   color:var(--gold);
+  letter-spacing:.3em;
+  font-size:.75rem;
   margin-bottom:1.5rem;
   opacity:0;
   animation:fadeUp 1s .2s forwards;
@@ -90,7 +130,6 @@ nav.shrink{padding:.8rem 4rem}
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(3rem,8vw,7rem);
   font-weight:300;
-  line-height:1.05;
   opacity:0;
   animation:fadeUp 1s .4s forwards;
 }
@@ -113,7 +152,7 @@ nav.shrink{padding:.8rem 4rem}
   text-decoration:none;
   font-size:.8rem;
   letter-spacing:.18em;
-  transition:all .4s cubic-bezier(.22,1,.36,1);
+  transition:.4s cubic-bezier(.22,1,.36,1);
   opacity:0;
   animation:fadeUp 1s .8s forwards;
 }
@@ -123,12 +162,8 @@ nav.shrink{padding:.8rem 4rem}
   transform:translateY(-3px);
 }
 
-/* ================== SECTIONS ================== */
-section{
-  max-width:1200px;
-  margin:auto;
-  padding:7rem 4rem;
-}
+/* SECTIONS */
+section{max-width:1200px;margin:auto;padding:7rem 4rem}
 
 .section-label{
   color:var(--gold);
@@ -136,21 +171,17 @@ section{
   letter-spacing:.25em;
   margin-bottom:1rem;
 }
-
 .section-heading{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(2.2rem,4vw,3.6rem);
-  margin-bottom:1rem;
 }
-
 .gold-line{
-  width:48px;
-  height:1px;
+  width:48px;height:1px;
   background:var(--gold);
-  margin-bottom:2.5rem;
+  margin:1.8rem 0;
 }
 
-/* ================== SERVICES ================== */
+/* SERVICES */
 #services{background:#0a0a0b;max-width:100%}
 #services .inner{max-width:1200px;margin:auto;padding:7rem 4rem}
 
@@ -163,12 +194,12 @@ section{
 .service-card{
   background:var(--card);
   border:1px solid var(--border);
-  padding:2.6rem 2.2rem;
+  padding:2.6rem;
   text-decoration:none;
   color:inherit;
   opacity:0;
   transform:translateY(40px);
-  transition:all .7s cubic-bezier(.22,1,.36,1);
+  transition:.7s cubic-bezier(.22,1,.36,1);
 }
 .service-card.visible{
   opacity:1;
@@ -179,48 +210,29 @@ section{
   border-color:var(--gold);
 }
 
-.service-icon{font-size:2.1rem;margin-bottom:1.3rem}
-.service-name{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem;
-  margin-bottom:.6rem;
-}
-.service-desc{font-size:.85rem;color:var(--muted)}
-
-/* ================== CONTACT ================== */
+/* CONTACT */
 .contact-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:4rem;
 }
 
-.contact-form input,
-.contact-form textarea{
-  width:100%;
-  background:transparent;
-  border:1px solid var(--border);
-  padding:.85rem;
-  color:var(--cream);
-  margin-bottom:1rem;
-}
-
-/* ================== FOOTER ================== */
+/* FOOTER */
 footer{
   padding:3rem 4rem;
   border-top:1px solid var(--border);
-  display:flex;
-  justify-content:center;
+  text-align:center;
   font-size:.8rem;
   color:var(--muted);
 }
 
-/* ================== ANIMATIONS ================== */
+/* ANIMATIONS */
 @keyframes fadeUp{
   from{opacity:0;transform:translateY(32px)}
   to{opacity:1;transform:translateY(0)}
 }
 
-/* ================== MOBILE ================== */
+/* RESPONSIVE */
 @media(max-width:900px){
   section{padding:5rem 2rem}
   .services-grid{grid-template-columns:1fr 1fr}
@@ -274,12 +286,6 @@ footer{
       <p>📧 barinderpal.singh013@gmail.com</p>
       <p>📍 Surrey, BC, Canada</p>
     </div>
-    <form class="contact-form">
-      <input placeholder="Name">
-      <input placeholder="Email">
-      <textarea rows="5" placeholder="Message"></textarea>
-      <button class="hero-cta">Send</button>
-    </form>
   </div>
 </section>
 
@@ -292,7 +298,7 @@ window.addEventListener('scroll',()=>{
     .classList.toggle('shrink',scrollY>40);
 });
 
-/* APPLE-STYLE SCROLL REVEAL */
+/* SCROLL REVEAL */
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting)e.target.classList.add('visible');
