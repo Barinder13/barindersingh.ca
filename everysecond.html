@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Every Second Matters | Insaniyat</title>
+
+    <style>
+        :root {
+            --dark-bg: #020617;
+            --light-bg: #f9fafb;
+            --dark-text: #020617;
+            --light-text: #e5e7eb;
+            --accent: #38bdf8;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        body.light {
+            background: var(--light-bg);
+            color: var(--dark-text);
+        }
+
+        header {
+            padding: 70px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #0f172a);
+        }
+
+        body.light header {
+            background: linear-gradient(135deg, #e2e8f0, #ffffff);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            color: var(--accent);
+        }
+
+        header p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            border-radius: 20px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .moment {
+            background: rgba(255,255,255,0.06);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        body.light .moment {
+            background: #ffffff;
+        }
+
+        .moment img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .moment div {
+            padding: 22px;
+        }
+
+        .moment h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+
+<header>
+    <h1>Every Second Matters</h1>
+    <p>
+        Life is built one second at a time.
+        Every breath, every choice, every moment carries the power
+        to spread humanity, kindness, and purpose.
+    </p>
+</header>
+
+<section>
+    <h2>⏳ The Power of a Moment</h2>
+    <p>
+        Insaniyat lives in the smallest actions — a pause before reacting,
+        a helping hand offered without being asked, a kind word spoken at
+        the right time. When lived consciously, every second becomes meaningful.
+    </p>
+</section>
+
+<section>
+    <h2>📷 Moments That Define Humanity</h2>
+
+    <div class="timeline">
+        <div class="moment">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Listening">
+            <div>
+                <h3>Listening</h3>
+                <p>Sometimes, the most powerful gift is giving someone your full attention.</p>
+            </div>
+        </div>
+
+        <div class="moment">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Kind smile">
+            <div>
+                <h3>Kindness</h3>
+                <p>A simple smile can change the course of someone’s entire day.</p>
+            </div>
+        </div>
+
+        <div class="moment">
+            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d" alt="Reflection">
+            <div>
+                <h3>Reflection</h3>
+                <p>Growth begins when we slow down and become aware of our actions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>🌱 Living with Intention</h2>
+    <p>
+        When every second is lived with intention, humanity becomes a habit.
+        Insaniyat is not practiced someday — it is practiced now.
+    </p>
+</section>
+
+<footer>
+    © 2026 • Every Second Matters — An Insaniyat Initiative
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+    }
+</script>
+
+</body>
+</html>
