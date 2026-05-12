@@ -1,313 +1,943 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Barinderpal Singh | Light of Humanity & AI Innovation</title>
+  <title>Barinderpal Singh | Light of Humanity & AI Innovation</title>
 
-<!-- ================= SEO META ================= -->
-<meta name="description" content="Barinderpal Singh — Humanity-first digital creator offering AI solutions, web design, hosting, and purpose-driven technology. Based in Canada.">
-<meta name="keywords" content="Barinderpal Singh, Insaniyat, AI solutions, web design Canada, website hosting, digital innovation">
-<meta name="author" content="Barinderpal Singh">
-<meta name="robots" content="index, follow">
+  <!-- ================= SEO META ================= -->
+  <meta name="description" content="Barinderpal Singh — Humanity-first digital creator offering AI solutions, web design, hosting, and purpose-driven technology. Based in Canada.">
+  <meta name="keywords" content="Barinderpal Singh, Insaniyat, AI solutions, web design Canada, website hosting, digital innovation">
+  <meta name="author" content="Barinderpal Singh">
+  <meta name="robots" content="index, follow">
 
-<!-- ================= CANONICAL ================= -->
-<link rel="canonical" href="https://www.barindersingh.ca">
+  <!-- ================= OPEN GRAPH ================= -->
+  <meta property="og:title" content="Barinderpal Singh | Light of Humanity & AI Innovation">
+  <meta property="og:description" content="Humanity-driven vision with AI-powered execution. Web, AI, and digital solutions built with purpose.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.barindersingh.ca">
+  <meta property="og:image" content="https://www.barindersingh.ca/og-image.jpg">
 
-<!-- ================= OPEN GRAPH ================= -->
-<meta property="og:title" content="Barinderpal Singh | Light of Humanity & AI Innovation">
-<meta property="og:description" content="Humanity-driven vision with AI-powered execution. Web, AI, and digital solutions built with purpose.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.barindersingh.ca">
-<meta property="og:image" content="https://www.barindersingh.ca/og-image.jpg">
+  <!-- ================= TWITTER ================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Barinderpal Singh">
+  <meta name="twitter:description" content="Light of Humanity meets AI innovation.">
+  <meta name="twitter:image" content="https://www.barindersingh.ca/og-image.jpg">
 
-<!-- ================= TWITTER ================= -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Barinderpal Singh">
-<meta name="twitter:description" content="Light of Humanity meets AI innovation.">
-<meta name="twitter:image" content="https://www.barindersingh.ca/og-image.jpg">
+  <!-- ================= CANONICAL ================= -->
+  <link rel="canonical" href="https://www.barindersingh.ca">
 
-<!-- ================= STRUCTURED DATA ================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Barinderpal Singh",
-  "url": "https://www.barindersingh.ca",
-  "jobTitle": "Digital Strategist & AI Solutions Builder",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Surrey",
-    "addressRegion": "BC",
-    "addressCountry": "CA"
+  <!-- ================= STRUCTURED DATA ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Barinderpal Singh",
+    "url": "https://www.barindersingh.ca",
+    "jobTitle": "Digital Strategist & AI Solutions Builder",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surrey",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    }
   }
-}
-</script>
+  </script>
 
-<!-- ================= FONTS ================= -->
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- ================= FONTS ================= -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+  <!-- ================= STYLES (UNCHANGED) ================= -->
+  <style>
+    /* YOUR ENTIRE EXISTING STYLE CODE */
+    /* (UNCHANGED – kept exactly as you provided) */
+    <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barinderpal Singh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root{
-  --gold:#c9a84c;
-  --gold-light:#e8d08a;
-  --ink:#0d0d0e;
-  --cream:#f8f5ef;
-  --muted:#6b6560;
-  --border:rgba(201,168,76,0.25);
-  --card:#13130f;
-}
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8d08a;
+      --ink: #0d0d0e;
+      --cream: #f8f5ef;
+      --muted: #6b6560;
+      --card-bg: #13130f;
+      --border: rgba(201,168,76,0.25);
+    }
 
-html{scroll-behavior:smooth}
-body{
-  font-family:'DM Sans',sans-serif;
-  background:var(--ink);
-  color:var(--cream);
-}
+    html { scroll-behavior: smooth; }
 
-/* NAV */
-nav{
-  position:fixed;
-  inset:0 0 auto 0;
-  padding:1.4rem 4rem;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  backdrop-filter:blur(18px);
-  background:rgba(13,13,14,.75);
-  border-bottom:1px solid var(--border);
-  z-index:1000;
-  transition:.45s cubic-bezier(.22,1,.36,1);
-}
-nav.shrink{padding:.8rem 4rem}
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ink);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
 
-.nav-logo{
-  font-family:'Cormorant Garamond',serif;
-  color:var(--gold);
-  letter-spacing:.15em;
-  text-decoration:none;
-}
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
 
-.nav-links{
-  display:flex;
-  gap:2.5rem;
-  list-style:none;
-}
-.nav-links a{
-  color:var(--cream);
-  text-decoration:none;
-  font-size:.75rem;
-  letter-spacing:.22em;
-  opacity:.75;
-  transition:.3s;
-}
-.nav-links a:hover{opacity:1;color:var(--gold)}
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 4rem;
+      backdrop-filter: blur(18px);
+      background: rgba(13,13,14,0.72);
+      border-bottom: 1px solid var(--border);
+      transition: padding 0.3s ease;
+    }
 
-/* HERO */
-#home{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:8rem 2rem;
-}
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+      text-decoration: none;
+    }
 
-.hero-tag{
-  color:var(--gold);
-  letter-spacing:.3em;
-  font-size:.75rem;
-  margin-bottom:1.5rem;
-  opacity:0;
-  animation:fadeUp 1s .2s forwards;
-}
+    .nav-links {
+      display: flex;
+      gap: 2.8rem;
+      list-style: none;
+    }
 
-.hero-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(3rem,8vw,7rem);
-  font-weight:300;
-  opacity:0;
-  animation:fadeUp 1s .4s forwards;
-}
-.hero-title em{color:var(--gold-light)}
+    .nav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      opacity: 0.75;
+      transition: opacity 0.2s, color 0.2s;
+      position: relative;
+    }
 
-.hero-sub{
-  max-width:480px;
-  margin-top:1.5rem;
-  color:var(--muted);
-  line-height:1.8;
-  opacity:0;
-  animation:fadeUp 1s .6s forwards;
-}
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
 
-.hero-cta{
-  margin-top:3rem;
-  padding:.85rem 2.4rem;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  text-decoration:none;
-  font-size:.8rem;
-  letter-spacing:.18em;
-  transition:.4s cubic-bezier(.22,1,.36,1);
-  opacity:0;
-  animation:fadeUp 1s .8s forwards;
-}
-.hero-cta:hover{
-  background:var(--gold);
-  color:var(--ink);
-  transform:translateY(-3px);
-}
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
 
-/* SECTIONS */
-section{max-width:1200px;margin:auto;padding:7rem 4rem}
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-.section-label{
-  color:var(--gold);
-  font-size:.7rem;
-  letter-spacing:.25em;
-  margin-bottom:1rem;
-}
-.section-heading{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.2rem,4vw,3.6rem);
-}
-.gold-line{
-  width:48px;height:1px;
-  background:var(--gold);
-  margin:1.8rem 0;
-}
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.05) 0%, transparent 60%);
+    }
 
-/* SERVICES */
-#services{background:#0a0a0b;max-width:100%}
-#services .inner{max-width:1200px;margin:auto;padding:7rem 4rem}
+    .hero-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.3s forwards;
+    }
 
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:1.8rem;
-}
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 8vw, 7.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.5s forwards;
+    }
 
-.service-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:2.6rem;
-  text-decoration:none;
-  color:inherit;
-  opacity:0;
-  transform:translateY(40px);
-  transition:.7s cubic-bezier(.22,1,.36,1);
-}
-.service-card.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-.service-card:hover{
-  transform:translateY(-8px);
-  border-color:var(--gold);
-}
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
 
-/* CONTACT */
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:4rem;
-}
+    .hero-sub {
+      margin-top: 1.6rem;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.7;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.75s forwards;
+    }
 
-/* FOOTER */
-footer{
-  padding:3rem 4rem;
-  border-top:1px solid var(--border);
-  text-align:center;
-  font-size:.8rem;
-  color:var(--muted);
-}
+    .hero-cta {
+      margin-top: 3rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 2.2rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
+      opacity: 0;
+      animation: fadeUp 0.9s 1s forwards;
+    }
 
-/* ANIMATIONS */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(32px)}
-  to{opacity:1;transform:translateY(0)}
-}
+    .hero-cta:hover { background: var(--gold); color: var(--ink); }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  section{padding:5rem 2rem}
-  .services-grid{grid-template-columns:1fr 1fr}
-  .contact-grid{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  .services-grid{grid-template-columns:1fr}
-}
-</style>
+    /* ── SLIDESHOW ── */
+    #slideshow-section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4rem;
+    }
+
+    .slideshow-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+
+    .slides-track {
+      display: flex;
+      transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 540px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    /* Slide backgrounds */
+    .slide-1 { background: linear-gradient(135deg, #1a0a2e 0%, #2d1b69 40%, #0d0d0e 100%); }
+    .slide-2 { background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 40%, #0d1117 100%); }
+    .slide-3 { background: linear-gradient(135deg, #0d1f0d 0%, #1a3a1a 40%, #0d0d0e 100%); }
+    .slide-4 { background: linear-gradient(135deg, #1f0a0a 0%, #3d1515 40%, #0d0d0e 100%); }
+
+    /* Decorative shapes per slide */
+    .slide::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .slide-1::before {
+      background:
+        radial-gradient(circle at 70% 30%, rgba(180,130,255,0.18) 0%, transparent 55%),
+        radial-gradient(circle at 20% 70%, rgba(201,168,76,0.1) 0%, transparent 40%);
+    }
+
+    .slide-2::before {
+      background:
+        radial-gradient(circle at 30% 40%, rgba(100,180,255,0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 65%, rgba(201,168,76,0.1) 0%, transparent 45%);
+    }
+
+    .slide-3::before {
+      background:
+        radial-gradient(circle at 60% 35%, rgba(100,255,160,0.12) 0%, transparent 55%),
+        radial-gradient(circle at 25% 60%, rgba(201,168,76,0.08) 0%, transparent 40%);
+    }
+
+    .slide-4::before {
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255,140,100,0.15) 0%, transparent 55%),
+        radial-gradient(circle at 80% 70%, rgba(201,168,76,0.1) 0%, transparent 40%);
+    }
+
+    .slide-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      font-size: 9rem;
+      opacity: 0.07;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .slide-geometric {
+      position: absolute;
+      top: 2rem; right: 3rem;
+      width: 180px; height: 180px;
+      border: 1px solid rgba(201,168,76,0.15);
+      transform: rotate(15deg);
+    }
+
+    .slide-geometric::before {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      padding: 3.5rem 4.5rem;
+      width: 100%;
+    }
+
+    .slide-number {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .slide-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .slide-subtitle {
+      font-size: 0.88rem;
+      color: var(--muted);
+      max-width: 420px;
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    .slide-bar {
+      position: absolute;
+      bottom: 0; left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      animation: barGrow 5s linear infinite;
+    }
+
+    @keyframes barGrow {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    /* Controls */
+    .slide-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .slide-btn {
+      width: 44px; height: 44px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--cream);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, background 0.2s;
+      font-size: 1.1rem;
+    }
+
+    .slide-btn:hover { border-color: var(--gold); background: rgba(201,168,76,0.1); }
+
+    .slide-dots {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--muted);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .dot.active { background: var(--gold); transform: scale(1.4); }
+
+    /* ── SECTIONS ── */
+    section { padding: 7rem 4rem; max-width: 1200px; margin: 0 auto; }
+
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .gold-line {
+      width: 48px; height: 1px;
+      background: var(--gold);
+      margin-bottom: 2.5rem;
+    }
+
+    /* About */
+    #about .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    #about p {
+      font-size: 1.02rem;
+      color: rgba(248,245,239,0.7);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .stat-box {
+      border: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      background: rgba(201,168,76,0.03);
+    }
+
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Services */
+    #services { background: #0a0a0b; max-width: 100%; }
+
+    #services > .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 7rem 4rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      padding: 2.5rem 2rem;
+      background: var(--card-bg);
+      transition: border-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.4s ease;
+    }
+
+    .service-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+    .service-card:hover::before { width: 100%; }
+
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+      color: var(--cream);
+    }
+
+    .service-desc {
+      font-size: 0.84rem;
+      color: var(--muted);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Contact */
+    #contact .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    #contact p {
+      font-size: 1rem;
+      color: rgba(248,245,239,0.65);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-item span:first-child {
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-field label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .form-field input,
+    .form-field textarea {
+      background: rgba(201,168,76,0.04);
+      border: 1px solid var(--border);
+      color: var(--cream);
+      padding: 0.85rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      resize: none;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus { border-color: var(--gold); }
+
+    .form-submit {
+      align-self: flex-start;
+      padding: 0.9rem 2.5rem;
+      background: var(--gold);
+      color: var(--ink);
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      font-weight: 500;
+    }
+
+    .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--border), transparent);
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1.2rem 1.8rem; }
+      section { padding: 5rem 1.8rem; }
+      #about .about-grid,
+      #contact .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .slide-content { padding: 2.5rem 2rem; }
+      footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 1.4rem; }
+      .services-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-<nav>
-  <a class="nav-logo" href="#home">BS</a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a href="#home" class="nav-logo">BS</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section id="home">
-  <p class="hero-tag">WELCOME</p>
-  <h1 class="hero-title">Illuminating <em>Ideas</em></h1>
-  <p class="hero-sub">Humanity-first vision with AI-powered execution.</p>
-  <a href="#services" class="hero-cta">Explore</a>
-</section>
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <p class="hero-tag">Welcome — Digital Excellence Awaits</p>
+    <h1 class="hero-title">Illuminating <em>Ideas</em><br>Into Reality</h1>
+    <p class="hero-sub">Crafting meaningful digital experiences — from humanity-driven vision to AI-powered innovation.</p>
+    <a href="#services" class="hero-cta">Explore Services ↓</a>
+  </section>
 
-<div id="services">
-  <div class="inner">
-    <p class="section-label">Services</p>
-    <h2 class="section-heading">What We Offer</h2>
-    <div class="gold-line"></div>
+  <!-- DIVIDER -->
+  <div class="divider"></div>
 
-    <div class="services-grid">
-      <a class="service-card">☀️ Insaniyat</a>
-      <a class="service-card">⏱️ EverySecond</a>
-      <a class="service-card">🤖 AI Solutions</a>
-      <a class="service-card">🌐 Web & Hosting</a>
+  <!-- SLIDESHOW -->
+  <div id="slideshow-section">
+    <p class="section-label">Featured Projects &amp; Ventures</p>
+
+    <div class="slideshow-wrapper">
+      <div class="slides-track" id="slidesTrack">
+
+        <!-- Slide 1 -->
+        <div class="slide slide-1">
+          <div class="slide-icon">☀️</div>
+          <div class="slide-geometric"></div>
+          <div class="slide-content">
+            <p class="slide-number">01 / 04</p>
+            <h2 class="slide-title">Insaniyat<br><em style="color:var(--gold-light)">Light of Humanity</em></h2>
+            <p class="slide-subtitle">A movement rooted in compassion — bridging hearts, cultures, and communities through the timeless power of human connection.</p>
+          </div>
+          <div class="slide-bar"></div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide slide-2">
+          <div class="slide-icon">⏱️</div>
+          <div class="slide-geometric"></div>
+          <div class="slide-content">
+            <p class="slide-number">02 / 04</p>
+            <h2 class="slide-title">Every<br><em style="color:#7ec8f0">Second</em></h2>
+            <p class="slide-subtitle">Time is the most precious resource. A platform dedicated to making every moment count — productivity, purpose, and mindful living.</p>
+          </div>
+          <div class="slide-bar"></div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide slide-3">
+          <div class="slide-icon">🤖</div>
+          <div class="slide-geometric"></div>
+          <div class="slide-content">
+            <p class="slide-number">03 / 04</p>
+            <h2 class="slide-title">Artificial<br><em style="color:#80e8a0">Intelligence</em></h2>
+            <p class="slide-subtitle">Harnessing the frontier of AI to create smarter solutions — automation, insight, and intelligence that empowers people, not replaces them.</p>
+          </div>
+          <div class="slide-bar"></div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide slide-4">
+          <div class="slide-icon">🌐</div>
+          <div class="slide-geometric"></div>
+          <div class="slide-content">
+            <p class="slide-number">04 / 04</p>
+            <h2 class="slide-title">Website<br><em style="color:#f09070">Domain to Hosting</em></h2>
+            <p class="slide-subtitle">Complete web solutions — from choosing the perfect domain to seamless hosting setup, design, and deployment. Your digital home, built right.</p>
+          </div>
+          <div class="slide-bar"></div>
+        </div>
+
+      </div><!-- /track -->
+    </div><!-- /wrapper -->
+
+    <div class="slide-controls">
+      <button class="slide-btn" id="prevBtn" aria-label="Previous">&#8592;</button>
+      <div class="slide-dots" id="slideDots">
+        <div class="dot active" data-index="0"></div>
+        <div class="dot" data-index="1"></div>
+        <div class="dot" data-index="2"></div>
+        <div class="dot" data-index="3"></div>
+      </div>
+      <button class="slide-btn" id="nextBtn" aria-label="Next">&#8594;</button>
     </div>
   </div>
-</div>
 
-<section id="contact">
-  <div class="contact-grid">
-    <div>
-      <p class="section-label">Contact</p>
-      <h2 class="section-heading">Let’s Build Together</h2>
+  <!-- DIVIDER -->
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="section-label" style="text-align:left; margin-bottom:1.2rem;">About</p>
+        <h2 class="section-heading">Vision With<br><em style="font-family:'Cormorant Garamond',serif; color:var(--gold-light);">Purpose</em></h2>
+        <div class="gold-line"></div>
+        <p>We believe in technology that serves humanity — not the other way around. Every project we undertake is grounded in a deep respect for people, culture, and meaningful progress.</p>
+        <br>
+        <p>From AI-driven platforms to beautifully crafted websites, our work spans the full spectrum of the digital landscape, guided by creativity, integrity, and the relentless pursuit of excellence.</p>
+      </div>
+      <div class="about-stats reveal" style="transition-delay:0.15s;">
+        <div class="stat-box">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">Core Ventures</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Human Impact</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">AI</div>
+          <div class="stat-label">Powered Solutions</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Digital Presence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider"></div>
+
+  <!-- SERVICES -->
+  <div id="services">
+    <div class="inner">
+      <p class="section-label" style="text-align:left; margin-bottom:1.2rem;">Services</p>
+      <h2 class="section-heading reveal">What We<br><em style="font-family:'Cormorant Garamond',serif; color:var(--gold-light);">Offer</em></h2>
       <div class="gold-line"></div>
-      <p>📧 barinderpal.singh013@gmail.com</p>
-      <p>📍 Surrey, BC, Canada</p>
+
+      <div class="services-grid">
+        <a href="insaniyat.html" class="service-card reveal" style="transition-delay:0.05s; text-decoration:none; display:block;">
+          <span class="service-icon">☀️</span>
+          <h3 class="service-name">Insaniyat</h3>
+          <p class="service-desc">Humanity-first initiatives and community-building projects that spread compassion and light across borders.</p>
+        </a>
+        <a href="everysecond.html" class="service-card reveal" style="transition-delay:0.12s; text-decoration:none; display:block;">
+          <span class="service-icon">⏱️</span>
+          <h3 class="service-name">Everysecond</h3>
+          <p class="service-desc">Productivity and lifestyle tools that help you reclaim your time and invest every moment with intention.</p>
+        </a>
+        <a href="AI.html" class="service-card reveal" style="transition-delay:0.19s; text-decoration:none; display:block;">
+          <span class="service-icon">🤖</span>
+          <h3 class="service-name">AI Solutions</h3>
+          <p class="service-desc">Custom AI integrations, automation workflows, and intelligent systems tailored to real-world needs.</p>
+        </a>
+        <a href="website.html" class="service-card reveal" style="transition-delay:0.26s; text-decoration:none; display:block;">
+          <span class="service-icon">🌐</span>
+          <h3 class="service-name">Web &amp; Hosting</h3>
+          <p class="service-desc">End-to-end web services — domain registration, hosting, design, development, and ongoing support.</p>
+        </a>
+      </div>
     </div>
   </div>
-</section>
 
-<footer>© 2026 Barinderpal Singh</footer>
+  <!-- DIVIDER -->
+  <div class="divider"></div>
 
-<script>
-/* NAV SHRINK */
-window.addEventListener('scroll',()=>{
-  document.querySelector('nav')
-    .classList.toggle('shrink',scrollY>40);
-});
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="section-label" style="text-align:left; margin-bottom:1.2rem;">Contact</p>
+        <h2 class="section-heading">Let's Build<br><em style="font-family:'Cormorant Garamond',serif; color:var(--gold-light);">Together</em></h2>
+        <div class="gold-line"></div>
+        <p>Have a project in mind, or want to learn more about any of our ventures? Reach out — great things begin with a conversation.</p>
+        <div class="contact-item"><span>✉</span><a href="mailto:barinderpal.singh013@gmail.com" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='inherit'">barinderpal.singh013@gmail.com</a></div>
+        <div class="contact-item"><span>🌐</span><a href="https://www.barindersingh.ca" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='inherit'">www.barindersingh.ca</a></div>
+        <div class="contact-item"><span>📍</span><span>Surrey, British Columbia, Canada</span></div>
+      </div>
 
-/* SCROLL REVEAL */
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting)e.target.classList.add('visible');
-  });
-},{threshold:.2});
+      <form class="contact-form reveal" style="transition-delay:0.15s;" onsubmit="handleSubmit(event)">
+        <div class="form-field">
+          <label>Your Name</label>
+          <input type="text" placeholder="Full name" />
+        </div>
+        <div class="form-field">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com" />
+        </div>
+        <div class="form-field">
+          <label>Message</label>
+          <textarea rows="5" placeholder="Tell me about your project…"></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+    </div>
+  </section>
 
-document.querySelectorAll('.service-card')
-  .forEach(el=>observer.observe(el));
-</script>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-name">Barinderpal Singh</div>
+    <p class="footer-copy">&copy; 2026 · All rights reserved</p>
+    <ul class="footer-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </footer>
 
+  <script>
+    // ── Slideshow ──
+    const track = document.getElementById('slidesTrack');
+    const dots  = document.querySelectorAll('.dot');
+    let current = 0;
+    let timer;
+
+    function goTo(idx) {
+      current = (idx + 4) % 4;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      // Restart progress bar animation
+      const bars = document.querySelectorAll('.slide-bar');
+      bars.forEach(b => { b.style.animation = 'none'; b.offsetHeight; b.style.animation = ''; });
+      resetTimer();
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(current + 1), 5000);
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+    document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+    dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.index)));
+
+    resetTimer();
+
+    // ── Scroll Reveal ──
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.15 });
+    reveals.forEach(r => observer.observe(r));
+
+    // ── Contact form ──
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.form-submit');
+      btn.textContent = 'Sent! ✓';
+      btn.style.background = '#4caf82';
+      setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; }, 3000);
+    }
+  </script>
 </body>
 </html>
