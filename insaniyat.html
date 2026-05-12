@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Insaniyat | Light of Humanity</title>
+
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-light: #f8fafc;
+            --text-dark: #0f172a;
+            --text-light: #e5e7eb;
+            --accent: #fbbf24;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            transition: all 0.3s ease;
+        }
+
+        body.light {
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #1e293b);
+        }
+
+        body.light header {
+            background: linear-gradient(135deg, #e2e8f0, #f8fafc);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            border-radius: 20px;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        body.light .card {
+            background: #ffffff;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card div {
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<button class="toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+
+<header>
+    <h1>Insaniyat</h1>
+    <p>
+        Insaniyat means humanity in its purest form — compassion, empathy,
+        kindness, and responsibility toward every living being.
+        It is the light that connects hearts beyond borders, beliefs, and identities.
+    </p>
+</header>
+
+<section>
+    <h2>🌟 Light of Humanity</h2>
+    <p>
+        Insaniyat is not a slogan — it is a way of living.
+        It teaches us to choose empathy over ego, service over self-interest,
+        and purpose over profit.
+    </p>
+</section>
+
+<section>
+    <h2>📸 Insaniyat in Action</h2>
+
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" alt="Helping hands">
+            <div>
+                <h3>Compassion</h3>
+                <p>Standing with others in moments of need, without judgment.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="Community support">
+            <div>
+                <h3>Community</h3>
+                <p>Building strong communities through understanding and unity.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Light and hope">
+            <div>
+                <h3>Hope</h3>
+                <p>Being a source of light in someone else’s darkness.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>💛 Our Belief</h2>
+    <p>
+        When we live with Insaniyat, success is measured not by wealth,
+        but by impact. A single act of kindness can illuminate countless lives.
+    </p>
+</section>
+
+<footer>
+    © 2026 • Insaniyat — Light of Humanity  
+</footer>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle("light");
+    }
+</script>
+
+</body>
+</html>
