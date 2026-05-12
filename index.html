@@ -10,7 +10,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
-/* ================== COLORS ================== */
 :root{
   --gold:#c9a84c;
   --gold-light:#e8d08a;
@@ -21,14 +20,6 @@
   --card:#13130f;
 }
 
-[data-theme="light"]{
-  --ink:#f6f6f4;
-  --cream:#0d0d0e;
-  --muted:#555;
-  --card:#ffffff;
-}
-
-/* ================== BASE ================== */
 html{scroll-behavior:smooth}
 body{
   font-family:'DM Sans',sans-serif;
@@ -40,22 +31,22 @@ body{
 nav{
   position:fixed;
   inset:0 0 auto 0;
+  padding:1.4rem 4rem;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:1.4rem 4rem;
-  backdrop-filter:blur(14px);
-  background:rgba(13,13,14,.8);
+  backdrop-filter:blur(20px);
+  background:rgba(13,13,14,.75);
   border-bottom:1px solid var(--border);
   z-index:1000;
-  transition:.3s;
+  transition:all .45s cubic-bezier(.22,1,.36,1);
 }
 nav.shrink{padding:.8rem 4rem}
 
 .nav-logo{
   font-family:'Cormorant Garamond',serif;
   color:var(--gold);
-  letter-spacing:.12em;
+  letter-spacing:.15em;
   text-decoration:none;
 }
 
@@ -64,34 +55,15 @@ nav.shrink{padding:.8rem 4rem}
   gap:2.5rem;
   list-style:none;
 }
-
 .nav-links a{
   color:var(--cream);
   text-decoration:none;
   font-size:.75rem;
-  letter-spacing:.2em;
-  text-transform:uppercase;
+  letter-spacing:.22em;
   opacity:.75;
+  transition:opacity .3s ease,color .3s ease;
 }
 .nav-links a:hover{opacity:1;color:var(--gold)}
-
-.menu-btn{
-  display:none;
-  font-size:1.6rem;
-  background:none;
-  border:none;
-  color:var(--cream);
-  cursor:pointer;
-}
-
-#themeToggle{
-  margin-left:1.5rem;
-  background:none;
-  border:1px solid var(--border);
-  color:var(--gold);
-  padding:.3rem .6rem;
-  cursor:pointer;
-}
 
 /* ================== HERO ================== */
 #home{
@@ -102,21 +74,26 @@ nav.shrink{padding:.8rem 4rem}
   align-items:center;
   text-align:center;
   padding:8rem 2rem;
+  overflow:hidden;
 }
 
 .hero-tag{
-  color:var(--gold);
-  letter-spacing:.25em;
   font-size:.75rem;
+  letter-spacing:.3em;
+  color:var(--gold);
   margin-bottom:1.5rem;
+  opacity:0;
+  animation:fadeUp 1s .2s forwards;
 }
 
 .hero-title{
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(3rem,8vw,7rem);
   font-weight:300;
+  line-height:1.05;
+  opacity:0;
+  animation:fadeUp 1s .4s forwards;
 }
-
 .hero-title em{color:var(--gold-light)}
 
 .hero-sub{
@@ -124,21 +101,34 @@ nav.shrink{padding:.8rem 4rem}
   margin-top:1.5rem;
   color:var(--muted);
   line-height:1.8;
+  opacity:0;
+  animation:fadeUp 1s .6s forwards;
 }
 
 .hero-cta{
   margin-top:3rem;
-  padding:.8rem 2.2rem;
+  padding:.85rem 2.4rem;
   border:1px solid var(--gold);
   color:var(--gold);
   text-decoration:none;
-  letter-spacing:.15em;
   font-size:.8rem;
+  letter-spacing:.18em;
+  transition:all .4s cubic-bezier(.22,1,.36,1);
+  opacity:0;
+  animation:fadeUp 1s .8s forwards;
 }
-.hero-cta:hover{background:var(--gold);color:var(--ink)}
+.hero-cta:hover{
+  background:var(--gold);
+  color:var(--ink);
+  transform:translateY(-3px);
+}
 
 /* ================== SECTIONS ================== */
-section{padding:7rem 4rem;max-width:1200px;margin:auto}
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:7rem 4rem;
+}
 
 .section-label{
   color:var(--gold);
@@ -149,14 +139,15 @@ section{padding:7rem 4rem;max-width:1200px;margin:auto}
 
 .section-heading{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(2.2rem,4vw,3.5rem);
+  font-size:clamp(2.2rem,4vw,3.6rem);
   margin-bottom:1rem;
 }
 
 .gold-line{
-  width:48px;height:1px;
+  width:48px;
+  height:1px;
   background:var(--gold);
-  margin-bottom:2rem;
+  margin-bottom:2.5rem;
 }
 
 /* ================== SERVICES ================== */
@@ -166,26 +157,35 @@ section{padding:7rem 4rem;max-width:1200px;margin:auto}
 .services-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:1.5rem;
+  gap:1.8rem;
 }
 
 .service-card{
   background:var(--card);
   border:1px solid var(--border);
-  padding:2.5rem;
+  padding:2.6rem 2.2rem;
   text-decoration:none;
   color:inherit;
-  transition:.3s;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .7s cubic-bezier(.22,1,.36,1);
 }
-.service-card:hover{transform:translateY(-6px);border-color:var(--gold)}
+.service-card.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.service-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+}
 
-.service-icon{font-size:2rem;margin-bottom:1rem}
+.service-icon{font-size:2.1rem;margin-bottom:1.3rem}
 .service-name{
   font-family:'Cormorant Garamond',serif;
   font-size:1.4rem;
   margin-bottom:.6rem;
 }
-.service-desc{color:var(--muted);font-size:.85rem}
+.service-desc{font-size:.85rem;color:var(--muted)}
 
 /* ================== CONTACT ================== */
 .contact-grid{
@@ -194,23 +194,14 @@ section{padding:7rem 4rem;max-width:1200px;margin:auto}
   gap:4rem;
 }
 
-.contact-item{margin-bottom:1rem;color:var(--muted)}
-
 .contact-form input,
 .contact-form textarea{
   width:100%;
   background:transparent;
   border:1px solid var(--border);
-  padding:.8rem;
+  padding:.85rem;
   color:var(--cream);
-}
-
-.form-submit{
-  margin-top:1rem;
-  padding:.8rem 2rem;
-  background:var(--gold);
-  border:none;
-  cursor:pointer;
+  margin-bottom:1rem;
 }
 
 /* ================== FOOTER ================== */
@@ -218,29 +209,23 @@ footer{
   padding:3rem 4rem;
   border-top:1px solid var(--border);
   display:flex;
-  justify-content:space-between;
-  align-items:center;
+  justify-content:center;
+  font-size:.8rem;
+  color:var(--muted);
+}
+
+/* ================== ANIMATIONS ================== */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(32px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
 /* ================== MOBILE ================== */
 @media(max-width:900px){
-  nav{padding:1rem 2rem}
   section{padding:5rem 2rem}
   .services-grid{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr}
-  .menu-btn{display:block}
-  .nav-links{
-    position:fixed;
-    inset:0;
-    background:var(--ink);
-    flex-direction:column;
-    justify-content:center;
-    transform:translateY(-100%);
-    transition:.4s;
-  }
-  .nav-links.open{transform:translateY(0)}
 }
-
 @media(max-width:600px){
   .services-grid{grid-template-columns:1fr}
 }
@@ -251,20 +236,18 @@ footer{
 
 <nav>
   <a class="nav-logo" href="#home">BS</a>
-  <button class="menu-btn" id="menuBtn">☰</button>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button id="themeToggle">☾</button>
 </nav>
 
 <section id="home">
-  <p class="hero-tag">Welcome</p>
+  <p class="hero-tag">WELCOME</p>
   <h1 class="hero-title">Illuminating <em>Ideas</em></h1>
-  <p class="hero-sub">Humanity-driven vision, AI-powered execution.</p>
-  <a class="hero-cta" href="#services">Explore</a>
+  <p class="hero-sub">Humanity-first vision with AI-powered execution.</p>
+  <a href="#services" class="hero-cta">Explore</a>
 </section>
 
 <div id="services">
@@ -274,26 +257,10 @@ footer{
     <div class="gold-line"></div>
 
     <div class="services-grid">
-      <a href="insaniyat.html" class="service-card">
-        <div class="service-icon">☀️</div>
-        <div class="service-name">Insaniyat</div>
-        <p class="service-desc">Light of humanity initiatives.</p>
-      </a>
-      <a href="everysecond.html" class="service-card">
-        <div class="service-icon">⏱️</div>
-        <div class="service-name">EverySecond</div>
-        <p class="service-desc">Time & productivity platforms.</p>
-      </a>
-      <a href="AI.html" class="service-card">
-        <div class="service-icon">🤖</div>
-        <div class="service-name">AI Solutions</div>
-        <p class="service-desc">Automation & intelligence.</p>
-      </a>
-      <a href="website.html" class="service-card">
-        <div class="service-icon">🌐</div>
-        <div class="service-name">Web & Hosting</div>
-        <p class="service-desc">Domain to deployment.</p>
-      </a>
+      <a class="service-card">☀️ Insaniyat</a>
+      <a class="service-card">⏱️ EverySecond</a>
+      <a class="service-card">🤖 AI Solutions</a>
+      <a class="service-card">🌐 Web & Hosting</a>
     </div>
   </div>
 </div>
@@ -304,45 +271,36 @@ footer{
       <p class="section-label">Contact</p>
       <h2 class="section-heading">Let’s Build Together</h2>
       <div class="gold-line"></div>
-      <p class="contact-item">📧 barinderpal.singh013@gmail.com</p>
-      <p class="contact-item">📍 Surrey, BC, Canada</p>
+      <p>📧 barinderpal.singh013@gmail.com</p>
+      <p>📍 Surrey, BC, Canada</p>
     </div>
-
-    <form class="contact-form" onsubmit="submitForm(event)">
+    <form class="contact-form">
       <input placeholder="Name">
       <input placeholder="Email">
       <textarea rows="5" placeholder="Message"></textarea>
-      <button class="form-submit">Send</button>
+      <button class="hero-cta">Send</button>
     </form>
   </div>
 </section>
 
-<footer>
-  <p>© 2026 Barinderpal Singh</p>
-</footer>
+<footer>© 2026 Barinderpal Singh</footer>
 
 <script>
-/* THEME */
-document.getElementById('themeToggle').onclick=()=>{
-  document.documentElement.toggleAttribute('data-theme');
-}
-
-/* MENU */
-document.getElementById('menuBtn').onclick=()=>{
-  document.querySelector('.nav-links').classList.toggle('open');
-}
-
-/* SHRINK NAV */
+/* NAV SHRINK */
 window.addEventListener('scroll',()=>{
-  document.querySelector('nav').classList.toggle('shrink',scrollY>40);
-})
+  document.querySelector('nav')
+    .classList.toggle('shrink',scrollY>40);
+});
 
-/* FORM */
-function submitForm(e){
-  e.preventDefault();
-  alert("Message sent successfully!");
-  e.target.reset();
-}
+/* APPLE-STYLE SCROLL REVEAL */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting)e.target.classList.add('visible');
+  });
+},{threshold:.2});
+
+document.querySelectorAll('.service-card')
+  .forEach(el=>observer.observe(el));
 </script>
 
 </body>
