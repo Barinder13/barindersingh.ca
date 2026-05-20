@@ -6,6 +6,55 @@
     <title>Insaniyat | Light of Humanity</title>
 
     <style>
+        .main-header {
+    width: 100%;
+    background: linear-gradient(to right, #000000, #111827, #000000);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fbbf24; /* gold */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #fbbf24;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 18px;
+        font-size: 12px;
+    }
+}
         :root {
             --bg-dark: #0f172a;
             --bg-light: #f8fafc;
@@ -15,6 +64,18 @@
         }
 
         body {
+            <header class="main-header">
+    <div class="header-container">
+        <div class="logo">BS</div>
+
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
             margin: 0;
             font-family: 'Segoe UI', Tahoma, sans-serif;
             background: var(--bg-dark);
@@ -106,6 +167,7 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
+        
     </style>
 </head>
 
