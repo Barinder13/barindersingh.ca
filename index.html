@@ -988,5 +988,31 @@
     );
   }
 </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("rrh3-RlSCNMwx5Pdy"); // 🔴 replace
+  })();
+
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    emailjs.sendForm(
+      "service_oktpsfs",      // 🔴 replace
+      "template_61wn604",     // 🔴 replace (main contact template)
+      event.target
+    ).then(
+      function () {
+        alert("Message sent successfully!");
+        event.target.reset();
+      },
+      function (error) {
+        console.error("FAILED...", error);
+        alert("Failed to send message. Please try again.");
+      }
+    );
+  }
+</script>
 </body>
 </html>
