@@ -861,20 +861,17 @@
 
       <form class="contact-form reveal" style="transition-delay:0.15s;" onsubmit="handleSubmit(event)">
         <div class="form-field">
-          <label>Your Name</label>
-          <input type="text" placeholder="Full name" />
-        </div>
-        <div class="form-field">
-          <label>Email Address</label>
-          <input type="email" placeholder="you@example.com" />
-        </div>
-         <div class="form-field">
-          <label>Phone No.</label>
-          <input type="text" placeholder="xxx-xxx-xxxx" />
-        </div>
-        <div class="form-field">
-          <label>Message</label>
-          <textarea rows="5" placeholder="Tell me about your project…"></textarea>
+          <label>YOUR NAME</label>
+  <input type="text" name="name" placeholder="Full name" required>
+
+  <label>EMAIL ADDRESS</label>
+  <input type="email" name="email" placeholder="you@example.com" required>
+
+  <label>PHONE NO.</label>
+  <input type="tel" name="phone" placeholder="xxx-xxx-xxxx">
+
+  <label>MESSAGE</label>
+  <textarea name="message" placeholder="Tell me about your project..." required></textarea>
         </div>
         <button type="submit" class="form-submit">Send Message →</button>
       </form>
@@ -938,5 +935,34 @@
       setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; }, 3000);
     }
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function () {
+    emailjs.init("YOUR_PUBLIC_KEY"); // ← replace
+  })();
+</script>
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID",   // ← replace
+      "YOUR_TEMPLATE_ID",  // ← replace
+      this
+    ).then(
+      function() {
+        document.getElementById("formStatus").innerText =
+          "✅ Message sent successfully!";
+        document.getElementById("contactForm").reset();
+      },
+      function(error) {
+        document.getElementById("formStatus").innerText =
+          "❌ Failed to send message. Try again.";
+        console.error(error);
+      }
+    );
+  });
+</script>
 </body>
 </html>
