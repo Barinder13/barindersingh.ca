@@ -1,258 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Barinderpal Singh</title>
 
-  <title>Barinderpal Singh | Portfolio & Professional Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
 
-  <!-- SEO -->
-  <meta name="description" content="Barinderpal Singh — Ad Operations, Marketing, AI & Digital Strategy professional. Full portfolio and long-form professional profile.">
-  <meta name="author" content="Barinderpal Singh">
-  <link rel="canonical" href="https://www.barindersingh.ca/portfolio.html">
+<style>
+:root{
+  --bg:#020617;
+  --text:#f8f5ef;
+  --muted:rgba(248,245,239,.65);
+  --gold:#c7a14a;
+  --gold-light:#e6c97a;
+}
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+*{box-sizing:border-box;margin:0;padding:0}
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.85;
+}
 
-    :root {
-      --gold: #c9a84c;
-      --gold-light: #e8d08a;
-      --ink: #0d0d0e;
-      --cream: #f8f5ef;
-      --muted: #6b6560;
-      --border: rgba(201,168,76,0.25);
-    }
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:5rem 2rem;
+}
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--ink);
-      color: var(--cream);
-      line-height: 1.85;
-    }
+h1{font-size:3rem}
+h2{font-size:2.2rem;margin-bottom:1rem}
+h3{font-size:1.2rem;color:var(--gold-light);margin-top:3rem}
+p,li{color:var(--muted);font-size:1rem}
 
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 1.4rem 4rem;
-      background: rgba(13,13,14,0.75);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.gold-line{
+  width:90px;
+  height:2px;
+  background:linear-gradient(to right,var(--gold),transparent);
+  margin:1.8rem 0 3rem;
+}
 
-    nav a {
-      color: var(--gold);
-      text-decoration: none;
-      font-family: 'Cormorant Garamond', serif;
-      letter-spacing: 0.08em;
-      font-size: 1.2rem;
-    }
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
+}
+.reveal.visible{opacity:1;transform:none}
 
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 10rem 2rem 6rem;
-    }
+/* TIMELINE */
+.timeline{
+  border-left:2px solid rgba(199,161,74,.3);
+  padding-left:40px;
+  margin-top:3rem;
+}
+.timeline-item{
+  position:relative;
+  margin-bottom:4rem;
+}
+.timeline-dot{
+  position:absolute;
+  left:-51px;
+  top:0;
+  width:16px;
+  height:16px;
+  background:var(--gold);
+  border-radius:50%;
+  box-shadow:0 0 0 6px rgba(199,161,74,.15);
+}
+.timeline-year{
+  font-size:.85rem;
+  letter-spacing:.08em;
+  color:var(--gold-light);
+}
+.timeline-title{
+  font-size:1.15rem;
+  font-weight:600;
+  margin:.4rem 0;
+}
 
-    h1, h2, h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 300;
-    }
+ul{padding-left:1.2rem;margin-top:1rem}
+li{margin-bottom:.6rem}
 
-    h1 {
-      font-size: clamp(3rem, 6vw, 4.5rem);
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      margin-top: 4rem;
-      margin-bottom: 1.2rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      margin-top: 2.5rem;
-      margin-bottom: 0.8rem;
-      color: var(--gold-light);
-    }
-
-    .gold-line {
-      width: 60px;
-      height: 1px;
-      background: var(--gold);
-      margin: 1.5rem 0 2.5rem;
-    }
-
-    p {
-      color: rgba(248,245,239,0.75);
-      margin-bottom: 1.4rem;
-      font-size: 1rem;
-    }
-
-    ul {
-      margin-left: 1.2rem;
-      margin-bottom: 1.8rem;
-    }
-
-    li {
-      margin-bottom: 0.6rem;
-      color: rgba(248,245,239,0.75);
-    }
-
-    .highlight {
-      color: var(--cream);
-      font-weight: 500;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 3rem 2rem;
-      text-align: center;
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:3rem 2rem;
+  font-size:.85rem;
+  color:rgba(248,245,239,.5);
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="index.html">← Home</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+<section>
+<h1>
+Barinderpal Singh<br>
+<em style="font-family:'Cormorant Garamond',serif;color:var(--gold-light)">
+Professional Portfolio
+</em>
+</h1>
 
-  <main>
+<div class="gold-line"></div>
 
-    <h1>
-      Barinderpal Singh<br>
-      <em style="color:var(--gold-light)">Portfolio & Professional Profile</em>
-    </h1>
+<p class="reveal">
+Surrey, British Columbia, Canada<br>
+📞 778-323-8903 | ✉️ barinderpal.singh013@gmail.com<br>
+Canadian Citizen
+</p>
+</section>
 
-    <div class="gold-line"></div>
+<section>
+<h2>Professional Profile</h2>
+<div class="gold-line"></div>
 
-    <!-- PROFILE -->
-    <p>
-      I am a <span class="highlight">results-driven Ad Operations, Marketing, and Digital Strategy professional</span>
-      based in Surrey, British Columbia, with hands-on experience managing
-      large-scale digital ecosystems across Canada and the United States.
-    </p>
+<p class="reveal">
+Results-driven Ad Operations, Marketing, and Operations Professional with extensive experience managing large-scale digital and print advertising campaigns across Canada and the United States. Demonstrated expertise in Google Ad Manager 360 (GAM 360), Google Analytics 4 (GA4), data analysis, KPI reporting, event coordination, and operational leadership.
+</p>
 
-    <p>
-      My work exists at the intersection of <span class="highlight">technology, analytics, and human-centered design</span>.
-      With a formal academic background in Computer Science and Engineering and
-      real-world leadership in media operations, I specialize in building
-      systems that scale responsibly — ethically, efficiently, and sustainably.
-    </p>
+<p class="reveal">
+Backed by a solid academic foundation in Computer Science and Engineering, including 12 peer-reviewed research publications in Computer Science Networking, bringing a rare blend of technical depth, data integrity, and systems-level problem-solving into marketing and advertising operations.
+</p>
 
-    <p>
-      Beyond execution, I believe in <span class="highlight">purpose-driven technology</span> —
-      digital solutions that enhance human potential rather than replace it.
-    </p>
+<p class="reveal">
+Highly organized and adaptable professional with a proven ability to manage multiple high-volume projects simultaneously, maintain operational excellence under pressure, and support strategic decision-making through actionable insights.
+</p>
+</section>
 
-    <!-- EXPERIENCE -->
-    <h2>Professional Experience</h2>
-    <div class="gold-line"></div>
+<section>
+<h2>Core Competencies & Technical Skills</h2>
+<div class="gold-line"></div>
 
-    <h3>Ad Operations Controller · Marketing Strategist · Events Coordinator</h3>
-    <p><em>Black Press Media (Carpenter Media Group, USA)</em></p>
+<ul class="reveal">
+<li>Google Ad Manager 360 (GAM 360)</li>
+<li>Google Analytics 4 (GA4)</li>
+<li>Campaign trafficking, monitoring, optimization & troubleshooting</li>
+<li>KPI dashboards, revenue analysis & reporting</li>
+<li>Digital & print ad execution across multi-market platforms</li>
+<li>Event planning, logistics & vendor coordination</li>
+<li>Process improvement & workflow optimization</li>
+<li>Cross-functional leadership & collaboration</li>
+<li>12 peer-reviewed research papers in Computer Science Networking</li>
+</ul>
+</section>
 
-    <p>
-      In my current role, I support one of North America’s largest community
-      media networks, managing advertising operations across
-      <span class="highlight">300+ websites</span> spanning Canada and all U.S. states.
-    </p>
+<section>
+<h2>Career Progression</h2>
+<div class="gold-line"></div>
 
-    <ul>
-      <li>Campaign trafficking, optimization, and troubleshooting using Google Ad Manager 360</li>
-      <li>Performance analysis and KPI reporting through GA4</li>
-      <li>Revenue insights and technical support for sales and leadership teams</li>
-      <li>Execution of multi-market digital and print advertising campaigns</li>
-      <li>End-to-end planning of 17+ Career, Education & Seniors Expos annually</li>
-      <li>Operational management of LocalWork.ca content, billing, and promotions</li>
-    </ul>
+<div class="timeline">
 
-    <p>
-      This role requires precision, adaptability, and strategic thinking —
-      balancing technical accuracy with business impact at scale.
-    </p>
+<div class="timeline-item reveal">
+<div class="timeline-dot"></div>
+<div class="timeline-year">2013 – 2015</div>
+<div class="timeline-title">M.Tech – Computer Science & Engineering</div>
+<p>Advanced academic specialization with strong focus on networking, systems design, and research methodology.</p>
+</div>
 
-    <!-- SECOND ROLE -->
-    <h3>Production Team Lead (Part-Time)</h3>
-    <p><em>Sunrise Kitchens Ltd · Surrey, BC</em></p>
+<div class="timeline-item reveal">
+<div class="timeline-dot"></div>
+<div class="timeline-year">2015 – 2020</div>
+<div class="timeline-title">Assistant Professor – Computer Science & Engineering</div>
+<p>Delivered lectures, mentored students, designed curricula, and published 12 peer-reviewed research papers.</p>
+</div>
 
-    <p>
-      Alongside my digital career, I serve in an operational leadership role
-      within a manufacturing environment — strengthening my systems thinking
-      and process optimization skills.
-    </p>
+<div class="timeline-item reveal">
+<div class="timeline-dot"></div>
+<div class="timeline-year">2020 – Present</div>
+<div class="timeline-title">Production Team Lead – Sunrise Kitchens Ltd.</div>
+<p>Operational leadership in manufacturing, CNC workflows, CAD support, inventory & safety management.</p>
+</div>
 
-    <ul>
-      <li>Supervision of CNC-based production workflows</li>
-      <li>Inventory coordination and scheduling</li>
-      <li>CAD-assisted execution and quality control</li>
-      <li>Process improvement and safety compliance</li>
-    </ul>
+<div class="timeline-item reveal">
+<div class="timeline-dot"></div>
+<div class="timeline-year">2022 – Present</div>
+<div class="timeline-title">Ad Operations Controller & Marketing Strategist</div>
+<p>Managing digital advertising across 300+ websites and leading large-scale expos across Canada.</p>
+</div>
 
-    <!-- ACADEMIA -->
-    <h2>Academic & Research Background</h2>
-    <div class="gold-line"></div>
+</div>
+</section>
 
-    <p>
-      Prior to moving into industry roles in Canada, I worked as an
-      <span class="highlight">Assistant Professor in Computer Science & Engineering</span>.
-    </p>
+<section>
+<h2>Professional Experience – Canada</h2>
+<div class="gold-line"></div>
 
-    <ul>
-      <li>Delivered undergraduate and postgraduate lectures</li>
-      <li>Designed curricula and assessment frameworks</li>
-      <li>Mentored student research and technical projects</li>
-      <li>Published <span class="highlight">12 peer-reviewed research papers</span> in Computer Science Networking</li>
-    </ul>
+<h3>Black Press Media (Carpenter Media Group, USA)</h3>
+<p><strong>Surrey, BC | 2022 – Present</strong></p>
 
-    <p>
-      This academic foundation sharpened my analytical thinking,
-      data integrity standards, and systems-level problem-solving —
-      all of which I bring into my professional work today.
-    </p>
+<ul class="reveal">
+<li>Manage digital advertising campaigns across 300+ websites</li>
+<li>Traffic, monitor & optimize campaigns using GAM 360</li>
+<li>Analyze performance using GA4</li>
+<li>Deliver KPI reports & revenue insights</li>
+<li>Plan & execute 17+ Career & Education and Seniors events annually</li>
+<li>Oversee LocalWork.ca operations including invoicing & promotions</li>
+<li>Act as liaison between sales, production, editorial & partners</li>
+</ul>
 
-    <!-- PHILOSOPHY -->
-    <h2>Philosophy & Vision</h2>
-    <div class="gold-line"></div>
+<h3>Sunrise Kitchens Ltd.</h3>
+<p><strong>Surrey, BC | 2020 – Present (Part-Time)</strong></p>
 
-    <p>
-      I believe the future belongs to those who can combine
-      <span class="highlight">intelligence with empathy</span>.
-      Technology should amplify human values, not erode them.
-    </p>
+<ul class="reveal">
+<li>Supervise production operations & CNC workflows</li>
+<li>Manage inventory, CAD support & scheduling</li>
+<li>Implement process improvements</li>
+</ul>
+</section>
 
-    <p>
-      Through ventures like <em>Insaniyat</em>, <em>EverySecond</em>,
-      and AI-powered platforms, my goal is to build digital systems
-      that respect time, dignity, and purpose.
-    </p>
+<section>
+<h2>Professional Experience – India</h2>
+<div class="gold-line"></div>
 
-    <p>
-      Whether optimizing ad operations, deploying AI solutions,
-      or designing digital experiences — my work is guided by one
-      principle:
-    </p>
+<h3>Assistant Professor – Computer Science & Engineering</h3>
+<p><strong>2015 – 2020</strong></p>
 
-    <p style="font-style:italic; color:var(--gold-light);">
-      “Technology must serve humanity — not the other way around.”
-    </p>
+<ul class="reveal">
+<li>Delivered undergraduate & postgraduate lectures</li>
+<li>Mentored students on research & projects</li>
+<li>Published 12 peer-reviewed research papers</li>
+<li>Collaborated on departmental initiatives</li>
+</ul>
+</section>
 
-  </main>
+<section>
+<h2>Education</h2>
+<div class="gold-line"></div>
 
-  <footer>
-    © 2026 · Barinderpal Singh · All rights reserved
-  </footer>
+<p><strong>M.Tech – Computer Science & Engineering</strong><br>
+DAV University, India | 2013 – 2015<br>
+Canadian Equivalency: ICES – BCIT</p>
+
+<p><strong>B.Tech – Information Technology</strong><br>
+Punjab Technical University, India | 2008 – 2012<br>
+Canadian Equivalency: WES</p>
+</section>
+
+<section>
+<h2>Additional Strengths</h2>
+<div class="gold-line"></div>
+
+<ul class="reveal">
+<li>Strong ability to bridge technical and business objectives</li>
+<li>High-volume, deadline-driven experience</li>
+<li>Excellent written & verbal communication</li>
+<li>Detail-oriented with accountability focus</li>
+<li>Experience across academia, media, manufacturing & digital advertising</li>
+</ul>
+</section>
+
+<footer>
+© 2026 Barinderpal Singh · Ad Operations · Marketing · Digital Strategy
+</footer>
+
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{
+if(e.isIntersecting)e.target.classList.add('visible')
+})
+},{threshold:.15})
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))
+</script>
 
 </body>
 </html>
