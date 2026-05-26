@@ -167,52 +167,63 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
-     .stories-slider {
-  padding: 80px 6%;
-  background: radial-gradient(circle at top, #0f172a, #020617);
+     .stories-section {
+  padding: 80px 20px;
+  background: radial-gradient(circle at top, #020617, #000);
   color: #e5e7eb;
-  position: relative;
 }
 
-.stories-slider h2 {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
+.stories-section h2 {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.slider-container {
-  position: relative;
-  max-width: 1100px;
+.story-slider {
+  max-width: 900px;
   margin: auto;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  align-items: center;
+  gap: 20px;
 }
 
-.slide {
+.story-slide {
   display: none;
-  animation: fade 0.6s ease-in-out;
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 16px;
 }
 
-.slide.active {
+.story-slide.active {
   display: block;
 }
 
-.slide h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
+.story-slide h3 {
+  color: #fbbf24;
+  margin-bottom: 20px;
 }
 
-.quote {
+.story-slide .quote {
   font-style: italic;
   opacity: 0.9;
   margin-bottom: 20px;
 }
 
-.slide ul {
-  margin-left: 20px;
+.nav-arrow {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.slide ul li {
-  margin-bottom: 10px;
+.nav-arrow:hover {
+  background: #fbbf24;
+  color: #000;
 }
 
 /* NAV ARROWS – CLICKABLE FIX */
@@ -324,54 +335,45 @@
 <section id="stories">
     <h2>📖 Stories of Insaniyat</h2>
 
-    <section class="stories-slider">
+    <section class="stories-section">
   <h2>Stories of Insaniyat</h2>
 
-  <div class="slider-container">
-    <!-- Slide 1 -->
-    <div class="slide active">
+  <div class="story-slider">
+
+    <button class="nav-arrow left" onclick="prevStory()">‹</button>
+
+    <div class="story-slide active">
       <h3>Story of Insaniyat</h3>
       <p class="quote">
         “My grandfather once told me:<br>
         Never let anyone leave your home empty-handed if they come seeking help.”
       </p>
-
       <p>
         Not everyone comes asking for money.<br>
         Some need care.<br>
         Some need guidance.<br>
         Some need advice, time, or simply to be heard.
       </p>
-
-      <p>
-        Helping doesn’t always require wealth.<br>
-        It requires intent, empathy, and the courage to care.
-      </p>
-
-      <strong>Let’s choose Insaniyat — being human, always.</strong>
+      <p><strong>Let’s choose Insaniyat — being human, always.</strong></p>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="slide">
+    <div class="story-slide">
       <h3>Our Everyday Heroes</h3>
-
-      <ul>
-        <li>The delivery worker who helps an elderly person with a smile</li>
-        <li>The teacher who believes in a child when no one else does</li>
-        <li>The healthcare worker who shows compassion beyond duty</li>
-        <li>The stranger who stands up for what’s right</li>
-      </ul>
-
       <p>
-        <strong>People before profit.<br>
-        Values before titles.<br>
-        Humanity before everything.</strong>
+        They don’t wear capes. They don’t seek applause.<br>
+        Yet, they quietly make the world a better place.
       </p>
+      <ul>
+        <li>Delivery workers helping the elderly</li>
+        <li>Teachers believing in children</li>
+        <li>Healthcare workers showing compassion</li>
+        <li>Strangers standing up for what’s right</li>
+      </ul>
+      <p><strong>Humanity before everything.</strong></p>
     </div>
 
-    <!-- Arrows -->
-    <button class="nav prev" onclick="changeSlide(-1)">❮</button>
-    <button class="nav next" onclick="changeSlide(1)">❯</button>
+    <button class="nav-arrow right" onclick="nextStory()">›</button>
+
   </div>
 </section>
 </section>
@@ -424,28 +426,25 @@
     }
 </script>
 <script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".slide");
+  let currentStory = 0;
+  const stories = document.querySelectorAll('.story-slide');
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[index].classList.add("active");
+  function showStory(index) {
+    stories.forEach(story => story.classList.remove('active'));
+    stories[index].classList.add('active');
   }
 
-  function changeSlide(direction) {
-    currentSlide += direction;
-
-    if (currentSlide < 0) {
-      currentSlide = slides.length - 1;
-    } else if (currentSlide >= slides.length) {
-      currentSlide = 0;
-    }
-
-    showSlide(currentSlide);
+  function nextStory() {
+    currentStory = (currentStory + 1) % stories.length;
+    showStory(currentStory);
   }
 
-  // Init
-  showSlide(currentSlide);
+  function prevStory() {
+    currentStory = (currentStory - 1 + stories.length) % stories.length;
+    showStory(currentStory);
+  }
+
+  showStory(currentStory);
 </script>
 </body>
 </html>
