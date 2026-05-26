@@ -150,18 +150,6 @@ footer{text-align:center;padding:40px;opacity:.8;}
   </div>
 </section>
 
-<section id="everysecond-slider">
-<h2 style="text-align:center;color:var(--accent)">📖 Stories That Make Every Second Count</h2>
-<div class="slider-card">
-<button class="nav prev" onclick="prevStory()">‹</button>
-<div class="story-content">
-<h2 id="story-title"></h2>
-<div id="story-text"></div>
-</div>
-<button class="nav next" onclick="nextStory()">›</button>
-</div>
-</section>
-
 <section class="time-form">
 <h2>📝 Share How You Value Time</h2>
 <div class="form-wrapper">
@@ -170,7 +158,8 @@ footer{text-align:center;padding:40px;opacity:.8;}
 </section>
 
 <footer>© 2026 • Every Second Matters — Insaniyat</footer>
-
+<section id="everysecond-slider">
+<h2 style="text-align:center;color:var(--accent)">📖 Stories That Make Every Second Count</h2>
 <script>
 function toggleTheme(){
   document.body.classList.toggle("light");
@@ -187,7 +176,7 @@ function nextStory(){currentIndex=(currentIndex+1)%everySecondStories.length;ren
 function prevStory(){currentIndex=(currentIndex-1+everySecondStories.length)%everySecondStories.length;renderStory();}
 document.addEventListener("DOMContentLoaded",renderStory);
 </script>
-
+</section>section>
 
 </body>
 </html>
