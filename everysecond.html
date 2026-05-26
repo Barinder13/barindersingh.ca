@@ -1,263 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Every Second Matters | Insaniyat</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Every Second Matters | Insaniyat</title>
 
-    <style>
-        :root {
-            --dark-bg: #020617;
-            --light-bg: #f9fafb;
-            --dark-text: #020617;
-            --light-text: #e5e7eb;
-            --accent: #38bdf8;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background: var(--dark-bg);
-            color: var(--light-text);
-            transition: all 0.3s ease;
-        }
-
-        body.light {
-            background: var(--light-bg);
-            color: var(--dark-text);
-        }
-
-        header {
-            padding: 70px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #020617, #0f172a);
-        }
-
-        body.light header {
-            background: linear-gradient(135deg, #e2e8f0, #ffffff);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 12px;
-            color: var(--accent);
-        }
-
-        header p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 1.2rem;
-            line-height: 1.7;
-        }
-
-        .toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 16px;
-            border-radius: 20px;
-            background: var(--accent);
-            color: #000;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        section {
-            padding: 60px 20px;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .timeline {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
-
-        .moment {
-            background: rgba(255,255,255,0.06);
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        }
-
-        body.light .moment {
-            background: #ffffff;
-        }
-
-        .moment img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .moment div {
-            padding: 22px;
-        }
-
-        .moment h3 {
-            margin-top: 0;
-            color: var(--accent);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        .time-form {
-    max-width: 600px;
-    margin: 30px auto;
-    display: grid;
-    gap: 14px;
+<style>
+:root {
+  --dark-bg:#020617;
+  --light-bg:#f9fafb;
+  --dark-text:#020617;
+  --light-text:#e5e7eb;
+  --accent:#38bdf8;
 }
 
-.time-form input,
-.time-form textarea {
-    padding: 14px;
-    border-radius: 10px;
-    border: none;
-    font-size: 1rem;
+body{
+  margin:0;
+  font-family:'Segoe UI',Tahoma,sans-serif;
+  background:var(--dark-bg);
+  color:var(--light-text);
+  transition:.3s;
+}
+body.light{background:var(--light-bg);color:var(--dark-text);}
+
+header{
+  padding:70px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#020617,#0f172a);
+}
+body.light header{
+  background:linear-gradient(135deg,#e2e8f0,#fff);
+}
+header h1{font-size:3rem;color:var(--accent);}
+header p{max-width:750px;margin:auto;font-size:1.2rem;line-height:1.7;}
+
+.toggle{
+  position:fixed;top:20px;right:20px;
+  padding:10px 16px;border-radius:20px;
+  background:var(--accent);border:none;
+  font-weight:600;cursor:pointer;
 }
 
-.time-form textarea {
-    min-height: 120px;
-}
+section{padding:60px 20px;max-width:1100px;margin:auto;}
 
-.time-form button {
-    padding: 14px;
-    border-radius: 20px;
-    border: none;
-    background: var(--accent);
-    font-weight: bold;
-    cursor: pointer;
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
+.moment{
+  background:rgba(255,255,255,.06);
+  border-radius:18px;overflow:hidden;
+}
+body.light .moment{background:#fff;}
+.moment img{width:100%;height:200px;object-fit:cover;}
+.moment div{padding:22px;}
+.moment h3{color:var(--accent);}
 
-.slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 30px;
+#everysecond-slider{
+  max-width:900px;
+  margin:100px auto;
+  padding:0 20px;
 }
+.slider-card{
+  position:relative;
+  background:rgba(255,255,255,.06);
+  border-radius:22px;
+  padding:60px 80px;
+  min-height:320px;
+}
+body.light .slider-card{background:#fff;}
 
-.slide {
-    max-width: 700px;
-    padding: 30px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.06);
-    text-align: center;
-}
+.story-content h2{color:var(--accent);}
+.story-content{line-height:1.8;font-size:1.05rem;}
 
-body.light .slide {
-    background: #ffffff;
+.nav{
+  position:absolute;top:50%;
+  transform:translateY(-50%);
+  width:48px;height:48px;
+  border-radius:50%;
+  background:rgba(0,0,0,.6);
+  color:#fff;border:none;
+  font-size:28px;cursor:pointer;
 }
+.prev{left:15px;}
+.next{right:15px;}
 
-.slide h3 {
-    color: var(--accent);
-    margin-bottom: 10px;
+.time-form{text-align:center;padding:80px 20px;}
+.form-wrapper{
+  max-width:900px;margin:auto;
+  background:rgba(255,255,255,.06);
+  border-radius:22px;padding:16px;
 }
+body.light .form-wrapper{background:#fff;}
+iframe{width:100%;height:820px;border:none;}
 
-.nav {
-    background: var(--accent);
-    border: none;
-    border-radius: 50%;
-    padding: 12px 16px;
-    cursor: pointer;
-    font-size: 1.2rem;
-}
-        .time-form {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-.time-form h2 {
-    font-size: 2.4rem;
-    margin-bottom: 12px;
-    color: var(--accent);
-}
-
-.time-form .form-intro {
-    max-width: 720px;
-    margin: 0 auto 40px;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    opacity: 0.9;
-}
-
-.form-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: auto allows
-    background: rgba(255,255,255,0.06);
-    border-radius: 22px;
-    padding: 16px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-    overflow: hidden;
-}
-
-body.light .form-wrapper {
-    background: #ffffff;
-}
-
-.form-wrapper iframe {
-    width: 100%;
-    height: 820px;
-    border: none;
-    border-radius: 16px;
-}
-        #everysecond-slider {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
-
-.slider-card {
-  position: relative;
-  background: rgba(255,255,255,0.06);
-  border-radius: 20px;
-  padding: 60px 80px;
-  min-height: 280px;
-}
-
-.story-content h2 {
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
-.story-content {
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  font-size: 32px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.prev { left: 15px; }
-.next { right: 15px; }
-
-@media (max-width: 768px) {
-  .slider-card {
-    padding: 50px 25px;
-  }
-}
-    </style>
+footer{text-align:center;padding:40px;opacity:.8;}
+</style>
 </head>
 
 <body>
@@ -265,321 +104,69 @@ body.light .form-wrapper {
 <button class="toggle" onclick="toggleTheme()">🌙 / ☀️</button>
 
 <header>
-    <h1>Every Second Matters</h1>
-    <p>
-        Life is built one second at a time.
-        Every breath, every choice, every moment carries the power
-        to spread humanity, kindness, and purpose.
-    </p>
+<h1>Every Second Matters</h1>
+<p>Life is built one second at a time. Every choice carries meaning.</p>
 </header>
 
 <section>
-    <h2>⏳ The Power of a Moment</h2>
-    <p>
-        Insaniyat lives in the smallest actions — a pause before reacting,
-        a helping hand offered without being asked, a kind word spoken at
-        the right time. When lived consciously, every second becomes meaningful.
-    </p>
+<h2>⏳ The Power of a Moment</h2>
+<p>Insaniyat lives in small actions — every second lived consciously matters.</p>
 </section>
 
 <section>
-    <h2>📷 Moments That Define Humanity</h2>
-
-    <div class="timeline">
-        <div class="moment">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Listening">
-            <div>
-                <h3>Listening</h3>
-                <p>Sometimes, the most powerful gift is giving someone your full attention.</p>
-            </div>
-        </div>
-
-        <div class="moment">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Kind smile">
-            <div>
-                <h3>Kindness</h3>
-                <p>A simple smile can change the course of someone’s entire day.</p>
-            </div>
-        </div>
-
-        <div class="moment">
-            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d" alt="Reflection">
-            <div>
-                <h3>Reflection</h3>
-                <p>Growth begins when we slow down and become aware of our actions.</p>
-            </div>
-        </div>
-    </div>
+<h2>📷 Moments That Define Humanity</h2>
+<div class="timeline">
+<div class="moment">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e">
+<div><h3>Listening</h3><p>Giving attention is powerful.</p></div>
+</div>
+<div class="moment">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+<div><h3>Kindness</h3><p>A smile can change a day.</p></div>
+</div>
+<div class="moment">
+<img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d">
+<div><h3>Reflection</h3><p>Awareness fuels growth.</p></div>
+</div>
+</div>
 </section>
 
-<section>
-    <h2>🌱 Living with Intention</h2>
-    <p>
-        When every second is lived with intention, humanity becomes a habit.
-        Insaniyat is not practiced someday — it is practiced now.
-    </p>
+<section id="everysecond-slider">
+<h2 style="text-align:center;color:var(--accent)">📖 Stories That Make Every Second Count</h2>
+<div class="slider-card">
+<button class="nav prev" onclick="prevStory()">‹</button>
+<div class="story-content">
+<h2 id="story-title"></h2>
+<div id="story-text"></div>
+</div>
+<button class="nav next" onclick="nextStory()">›</button>
+</div>
 </section>
-    <section id="everysecond-slider">
-  <div class="slider-card">
-    <button class="nav prev" onclick="prevStory()">‹</button>
 
-    <div class="story-content">
-      <h2 id="story-title"></h2>
-      <div id="story-text"></div>
-    </div>
-
-    <button class="nav next" onclick="nextStory()">›</button>
-  </div>
+<section class="time-form">
+<h2>📝 Share How You Value Time</h2>
+<div class="form-wrapper">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenQofxylKFi6Aof9aVBCY6niIDZZGTP0a09jCkWcb7Kao4fw/viewform"></iframe>
+</div>
 </section>
-    
-    <section class="time-form">
-    <h2>📝 Share How You Value Time</h2>
-    <p class="form-intro">
-        Every second matters. Tell us how you use your time — in life, work, or personal growth.
-        Your story may inspire others to live with intention.
-    </p>
 
-    <div class="form-wrapper">
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSenQofxylKFi6Aof9aVBCY6niIDZZGTP0a09jCkWcb7Kao4fw/viewform?usp=publish-editor"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            loading="lazy">
-            Loading…
-        </iframe>
-    </div>
-</section>
-    
-<footer>
-    © 2026 • Every Second Matters — An Insaniyat Initiative
-</footer>
+<footer>© 2026 • Every Second Matters — Insaniyat</footer>
 
 <script>
-const everySecondStories = [
-
-{
-  title: "Persistence Over Impossible",
-  content: `
-  If something didn’t work out, it doesn’t always mean it’s impossible.
-  It might just mean the effort wasn’t enough.
-
-  Success often hides behind persistence, consistency, and pushing a little further than you think you can.
-
-  Before calling it impossible, ask yourself:
-  Did I truly give it everything?
-
-  Keep going. Adjust. Try again.
-  <strong>Every second counts.</strong>
-  `
-},
-
-{
-  title: "We Discover Meaning",
-  content: `
-  We don’t create the meaning of our life — we discover it.
-
-  Meaning reveals itself through our choices, struggles, and responses.
-  Every phase reshapes our “why.”
-
-  When fear loosens and presence grows, clarity appears.
-
-  <ul>
-    <li>Every second is an opportunity</li>
-    <li>Every decision defines us</li>
-    <li>Every moment holds meaning</li>
-  </ul>
-
-  What matters is the side we choose — again and again.
-  `
-},
-
-{
-  title: "Move More, Sit Less",
-  content: `
-  A lot of sitting will age you — faster than you think. ⏳
-
-  Sedentary life impacts energy, health, and longevity.
-
-  Small habits create big change:
-  <ul>
-    <li>Walk daily — even 20 minutes</li>
-    <li>Take stairs</li>
-    <li>Reduce screen time</li>
-    <li>Eat real food</li>
-    <li>Sleep better</li>
-    <li>Move, play, connect</li>
-  </ul>
-
-  Longevity is built every second.
-  `
-},
-
-{
-  title: "Every Second Has Value",
-  content: `
-  Time is the one thing we all share — yet use differently.
-
-  Growth, progress, and purpose are built one moment at a time.
-
-  Respect time.
-  Use it wisely.
-
-  Because the worth of time is priceless.
-  `
-},
-
-{
-  title: "Your Inner Dialogue",
-  content: `
-  Whom do you talk to the most every day?
-
-  👉 Yourself.
-
-  The quality of your inner dialogue shapes your confidence and outcomes.
-
-  Productivity doesn’t start with tools —
-  It starts with mindset.
-
-  What you repeat every second becomes your reality.
-  `
-},
-
-{
-  title: "Be Thankful. Be Present.",
-  content: `
-  In the rush of life, we chase what’s next.
-
-  But peace comes from pausing and appreciating what’s already here.
-
-  Be thankful.
-  Be present.
-  Feel light.
-
-  Make it a habit.
-  Every second counts.
-  `
-},
-
-{
-  title: "This Time Will Also Pass",
-  content: `
-  One line that grounds you in all seasons:
-
-  “This time will also pass through.”
-
-  In struggle or success —
-  Stay balanced.
-  Stay grateful.
-  Stay strong.
-
-  Every moment is temporary.
-  `
-},
-
-{
-  title: "Passion Makes Work Lighter",
-  content: `
-  When work aligns with passion, hours lose their weight.
-
-  Some days are long — but meaningful.
-
-  <ul>
-    <li>Purpose fuels productivity</li>
-    <li>Passion makes time secondary</li>
-    <li>Love creates growth</li>
-  </ul>
-
-  Do what excites you.
-  Every second counts.
-  `
-},
-
-{
-  title: "The Early Bird",
-  content: `
-  Timing matters.
-
-  Those who act early spot opportunity first.
-
-  <ul>
-    <li>Start early</li>
-    <li>Act before hesitation</li>
-    <li>Turn moments into momentum</li>
-  </ul>
-
-  Because in life —
-  Every second truly matters.
-  `
-},
-
-{
-  title: "Start Now",
-  content: `
-  Most people wait for the perfect moment.
-
-  But there is no perfect moment.
-  There is only now.
-
-  Small steps done consistently beat big plans never executed.
-
-  Focus. Be patient. Be disciplined.
-  Use every second intentionally.
-  `
-},
-
-{
-  title: "Everyone Has Their Own Clock",
-  content: `
-  Sometimes we feel behind when we compare.
-
-  But every life has its own timing.
-
-  Work quietly.
-  Believe deeply.
-  Move steadily.
-
-  Your time will come.
-  `
-},
-
-{
-  title: "Lessons of Life",
-  content: `
-  Every second teaches us something.
-
-  Mistakes become lessons.
-  Failures build wisdom.
-  Challenges create strength.
-
-  Life isn’t about avoiding lessons —
-  It’s about learning from each one.
-  `
+function toggleTheme(){
+  document.body.classList.toggle("light");
 }
 
-];
-    let currentIndex = 0;
+const everySecondStories=[{title:"Persistence Over Impossible",content:"If something didn’t work out, it doesn’t mean it’s impossible. Keep going. Every second counts."},{title:"We Discover Meaning",content:"Meaning is discovered through choices and struggles."},{title:"Move More, Sit Less",content:"Small habits shape longevity."},{title:"Every Second Has Value",content:"Time is priceless when used intentionally."},{title:"Your Inner Dialogue",content:"The voice you repeat shapes your life."}];
 
-function renderStory() {
-  document.getElementById("story-title").innerHTML =
-    everySecondStories[currentIndex].title;
-
-  document.getElementById("story-text").innerHTML =
-    everySecondStories[currentIndex].content;
+let currentIndex=0;
+function renderStory(){
+document.getElementById("story-title").innerText=everySecondStories[currentIndex].title;
+document.getElementById("story-text").innerHTML=everySecondStories[currentIndex].content;
 }
-
-function nextStory() {
-  currentIndex = (currentIndex + 1) % everySecondStories.length;
-  renderStory();
-}
-
-function prevStory() {
-  currentIndex =
-    (currentIndex - 1 + everySecondStories.length) % everySecondStories.length;
-  renderStory();
-}
-
-document.addEventListener("DOMContentLoaded", renderStory);
+function nextStory(){currentIndex=(currentIndex+1)%everySecondStories.length;renderStory();}
+function prevStory(){currentIndex=(currentIndex-1+everySecondStories.length)%everySecondStories.length;renderStory();}
+document.addEventListener("DOMContentLoaded",renderStory);
 </script>
 
 </body>
