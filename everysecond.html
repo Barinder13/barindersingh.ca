@@ -273,31 +273,6 @@ body.light .form-wrapper {
         Insaniyat is not practiced someday — it is practiced now.
     </p>
 </section>
-<section>
-    <h2>📝 Share How You Value Time</h2>
-    <p>
-        Every second matters. Tell us how you use your time —
-        in life, work, or personal growth. Your story may inspire others.
-    </p>
-
-    <form id="timeForm" class="time-form">
-        <input type="text" placeholder="Your Name (optional)" required>
-        <input type="text" placeholder="Your Role (Student, Parent, Professional)">
-        <textarea placeholder="How do you value and use your time daily?" required></textarea>
-        <button type="submit">Share My Story</button>
-    </form>
-</section>
-    <section>
-    <h2>⏱ Stories Where Every Second Counts</h2>
-
-    <div class="slider">
-        <button class="nav prev" onclick="changeSlide(-1)">❮</button>
-
-        <div class="slide" id="slideContent"></div>
-
-        <button class="nav next" onclick="changeSlide(1)">❯</button>
-    </div>
-</section>
     <section class="time-form">
     <h2>📝 Share How You Value Time</h2>
     <p class="form-intro">
@@ -322,54 +297,208 @@ body.light .form-wrapper {
 </footer>
 
 <script>
-    function toggleTheme() {
-        document.body.classList.toggle("light");
-    }
+const everySecondStories = [
 
-    const timeStories = [
-        {
-            name: "A Working Parent",
-            role: "Parent",
-            story: "I wake up early to spend quality time with my kids before work. Even 15 minutes makes a difference."
-        },
-        {
-            name: "University Student",
-            role: "Student",
-            story: "I plan my day hour by hour so I don’t waste time scrolling. Small discipline saved my future."
-        },
-        {
-            name: "Entrepreneur",
-            role: "Business Owner",
-            story: "Every second I invest wisely compounds into growth — personally and professionally."
-        }
-    ];
+{
+  title: "Persistence Over Impossible",
+  content: `
+  If something didn’t work out, it doesn’t always mean it’s impossible.
+  It might just mean the effort wasn’t enough.
 
-    let currentSlide = 0;
-    const slideContent = document.getElementById("slideContent");
+  Success often hides behind persistence, consistency, and pushing a little further than you think you can.
 
-    function renderSlide() {
-        const s = timeStories[currentSlide];
-        slideContent.innerHTML = `
-            <h3>${s.name}</h3>
-            <strong>${s.role}</strong>
-            <p>${s.story}</p>
-        `;
-    }
+  Before calling it impossible, ask yourself:
+  Did I truly give it everything?
 
-    function changeSlide(direction) {
-        currentSlide += direction;
-        if (currentSlide < 0) currentSlide = timeStories.length - 1;
-        if (currentSlide >= timeStories.length) currentSlide = 0;
-        renderSlide();
-    }
+  Keep going. Adjust. Try again.
+  <strong>Every second counts.</strong>
+  `
+},
 
-    renderSlide();
+{
+  title: "We Discover Meaning",
+  content: `
+  We don’t create the meaning of our life — we discover it.
 
-    document.getElementById("timeForm").addEventListener("submit", e => {
-        e.preventDefault();
-        alert("Thank you! Your story inspires humanity. 🙏");
-        e.target.reset();
-    });
+  Meaning reveals itself through our choices, struggles, and responses.
+  Every phase reshapes our “why.”
+
+  When fear loosens and presence grows, clarity appears.
+
+  <ul>
+    <li>Every second is an opportunity</li>
+    <li>Every decision defines us</li>
+    <li>Every moment holds meaning</li>
+  </ul>
+
+  What matters is the side we choose — again and again.
+  `
+},
+
+{
+  title: "Move More, Sit Less",
+  content: `
+  A lot of sitting will age you — faster than you think. ⏳
+
+  Sedentary life impacts energy, health, and longevity.
+
+  Small habits create big change:
+  <ul>
+    <li>Walk daily — even 20 minutes</li>
+    <li>Take stairs</li>
+    <li>Reduce screen time</li>
+    <li>Eat real food</li>
+    <li>Sleep better</li>
+    <li>Move, play, connect</li>
+  </ul>
+
+  Longevity is built every second.
+  `
+},
+
+{
+  title: "Every Second Has Value",
+  content: `
+  Time is the one thing we all share — yet use differently.
+
+  Growth, progress, and purpose are built one moment at a time.
+
+  Respect time.
+  Use it wisely.
+
+  Because the worth of time is priceless.
+  `
+},
+
+{
+  title: "Your Inner Dialogue",
+  content: `
+  Whom do you talk to the most every day?
+
+  👉 Yourself.
+
+  The quality of your inner dialogue shapes your confidence and outcomes.
+
+  Productivity doesn’t start with tools —
+  It starts with mindset.
+
+  What you repeat every second becomes your reality.
+  `
+},
+
+{
+  title: "Be Thankful. Be Present.",
+  content: `
+  In the rush of life, we chase what’s next.
+
+  But peace comes from pausing and appreciating what’s already here.
+
+  Be thankful.
+  Be present.
+  Feel light.
+
+  Make it a habit.
+  Every second counts.
+  `
+},
+
+{
+  title: "This Time Will Also Pass",
+  content: `
+  One line that grounds you in all seasons:
+
+  “This time will also pass through.”
+
+  In struggle or success —
+  Stay balanced.
+  Stay grateful.
+  Stay strong.
+
+  Every moment is temporary.
+  `
+},
+
+{
+  title: "Passion Makes Work Lighter",
+  content: `
+  When work aligns with passion, hours lose their weight.
+
+  Some days are long — but meaningful.
+
+  <ul>
+    <li>Purpose fuels productivity</li>
+    <li>Passion makes time secondary</li>
+    <li>Love creates growth</li>
+  </ul>
+
+  Do what excites you.
+  Every second counts.
+  `
+},
+
+{
+  title: "The Early Bird",
+  content: `
+  Timing matters.
+
+  Those who act early spot opportunity first.
+
+  <ul>
+    <li>Start early</li>
+    <li>Act before hesitation</li>
+    <li>Turn moments into momentum</li>
+  </ul>
+
+  Because in life —
+  Every second truly matters.
+  `
+},
+
+{
+  title: "Start Now",
+  content: `
+  Most people wait for the perfect moment.
+
+  But there is no perfect moment.
+  There is only now.
+
+  Small steps done consistently beat big plans never executed.
+
+  Focus. Be patient. Be disciplined.
+  Use every second intentionally.
+  `
+},
+
+{
+  title: "Everyone Has Their Own Clock",
+  content: `
+  Sometimes we feel behind when we compare.
+
+  But every life has its own timing.
+
+  Work quietly.
+  Believe deeply.
+  Move steadily.
+
+  Your time will come.
+  `
+},
+
+{
+  title: "Lessons of Life",
+  content: `
+  Every second teaches us something.
+
+  Mistakes become lessons.
+  Failures build wisdom.
+  Challenges create strength.
+
+  Life isn’t about avoiding lessons —
+  It’s about learning from each one.
+  `
+}
+
+];
 </script>
 
 </body>
