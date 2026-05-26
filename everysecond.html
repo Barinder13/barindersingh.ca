@@ -273,30 +273,19 @@ body.light .form-wrapper {
         Insaniyat is not practiced someday — it is practiced now.
     </p>
 </section>
-    <section class="time-form">
-    <h2>📝 Share How You Value Time</h2>
-    <p class="form-intro">
-        Every second matters. Tell us how you use your time — in life, work, or personal growth.
-        Your story may inspire others to live with intention.
-    </p>
+    <section id="everysecond-slider">
+  <div class="slider-card">
+    <button class="nav prev" onclick="prevStory()">‹</button>
 
-    <div class="form-wrapper">
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSenQofxylKFi6Aof9aVBCY6niIDZZGTP0a09jCkWcb7Kao4fw/viewform?usp=publish-editor"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            loading="lazy">
-            Loading…
-        </iframe>
+    <div class="story-content">
+      <h2 id="story-title"></h2>
+      <div id="story-text"></div>
     </div>
-</section>
-    
-<footer>
-    © 2026 • Every Second Matters — An Insaniyat Initiative
-</footer>
 
-<script>
+    <button class="nav next" onclick="nextStory()">›</button>
+  </div>
+</section>
+    <script>
 const everySecondStories = [
 
 {
@@ -500,6 +489,30 @@ const everySecondStories = [
 
 ];
 </script>
+    <section class="time-form">
+    <h2>📝 Share How You Value Time</h2>
+    <p class="form-intro">
+        Every second matters. Tell us how you use your time — in life, work, or personal growth.
+        Your story may inspire others to live with intention.
+    </p>
+
+    <div class="form-wrapper">
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSenQofxylKFi6Aof9aVBCY6niIDZZGTP0a09jCkWcb7Kao4fw/viewform?usp=publish-editor"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            loading="lazy">
+            Loading…
+        </iframe>
+    </div>
+</section>
+    
+<footer>
+    © 2026 • Every Second Matters — An Insaniyat Initiative
+</footer>
+
+
 
 </body>
 </html>
