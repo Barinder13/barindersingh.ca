@@ -137,6 +137,9 @@ footer{text-align:center;padding:40px;opacity:.8;}
         Insaniyat is not practiced someday — it is practiced now.
     </p>
 </section>
+  <section id="everysecond-slider">
+<h2 style="text-align:center;color:var(--accent)">📖 Stories That Make Every Second Count</h2>
+  </section>
     <section id="everysecond-slider">
   <div class="slider-card">
     <button class="nav prev" onclick="prevStory()">‹</button>
@@ -158,8 +161,7 @@ footer{text-align:center;padding:40px;opacity:.8;}
 </section>
 
 <footer>© 2026 • Every Second Matters — Insaniyat</footer>
-<section id="everysecond-slider">
-<h2 style="text-align:center;color:var(--accent)">📖 Stories That Make Every Second Count</h2>
+
 <script>
 function toggleTheme(){
   document.body.classList.toggle("light");
@@ -176,7 +178,7 @@ function nextStory(){currentIndex=(currentIndex+1)%everySecondStories.length;ren
 function prevStory(){currentIndex=(currentIndex-1+everySecondStories.length)%everySecondStories.length;renderStory();}
 document.addEventListener("DOMContentLoaded",renderStory);
 </script>
-</section>section>
+
 
 </body>
 </html>
