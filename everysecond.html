@@ -107,6 +107,67 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
+        .time-form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: grid;
+    gap: 14px;
+}
+
+.time-form input,
+.time-form textarea {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+}
+
+.time-form textarea {
+    min-height: 120px;
+}
+
+.time-form button {
+    padding: 14px;
+    border-radius: 20px;
+    border: none;
+    background: var(--accent);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.slide {
+    max-width: 700px;
+    padding: 30px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.06);
+    text-align: center;
+}
+
+body.light .slide {
+    background: #ffffff;
+}
+
+.slide h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.nav {
+    background: var(--accent);
+    border: none;
+    border-radius: 50%;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
     </style>
 </head>
 
@@ -169,7 +230,32 @@
         Insaniyat is not practiced someday — it is practiced now.
     </p>
 </section>
+<section>
+    <h2>📝 Share How You Value Time</h2>
+    <p>
+        Every second matters. Tell us how you use your time —
+        in life, work, or personal growth. Your story may inspire others.
+    </p>
 
+    <form id="timeForm" class="time-form">
+        <input type="text" placeholder="Your Name (optional)" required>
+        <input type="text" placeholder="Your Role (Student, Parent, Professional)">
+        <textarea placeholder="How do you value and use your time daily?" required></textarea>
+        <button type="submit">Share My Story</button>
+    </form>
+</section>
+    <section>
+    <h2>⏱ Stories Where Every Second Counts</h2>
+
+    <div class="slider">
+        <button class="nav prev" onclick="changeSlide(-1)">❮</button>
+
+        <div class="slide" id="slideContent"></div>
+
+        <button class="nav next" onclick="changeSlide(1)">❯</button>
+    </div>
+</section>
+    
 <footer>
     © 2026 • Every Second Matters — An Insaniyat Initiative
 </footer>
@@ -178,6 +264,51 @@
     function toggleTheme() {
         document.body.classList.toggle("light");
     }
+
+    const timeStories = [
+        {
+            name: "A Working Parent",
+            role: "Parent",
+            story: "I wake up early to spend quality time with my kids before work. Even 15 minutes makes a difference."
+        },
+        {
+            name: "University Student",
+            role: "Student",
+            story: "I plan my day hour by hour so I don’t waste time scrolling. Small discipline saved my future."
+        },
+        {
+            name: "Entrepreneur",
+            role: "Business Owner",
+            story: "Every second I invest wisely compounds into growth — personally and professionally."
+        }
+    ];
+
+    let currentSlide = 0;
+    const slideContent = document.getElementById("slideContent");
+
+    function renderSlide() {
+        const s = timeStories[currentSlide];
+        slideContent.innerHTML = `
+            <h3>${s.name}</h3>
+            <strong>${s.role}</strong>
+            <p>${s.story}</p>
+        `;
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = timeStories.length - 1;
+        if (currentSlide >= timeStories.length) currentSlide = 0;
+        renderSlide();
+    }
+
+    renderSlide();
+
+    document.getElementById("timeForm").addEventListener("submit", e => {
+        e.preventDefault();
+        alert("Thank you! Your story inspires humanity. 🙏");
+        e.target.reset();
+    });
 </script>
 
 </body>
