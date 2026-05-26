@@ -167,67 +167,84 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
-       .story-slider {
+     .stories-slider {
+  padding: 80px 6%;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
   position: relative;
-  width: 100%;
-  max-width: 1100px;
-  margin: 80px auto;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.6s ease;
+.stories-slider h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slide {
-  min-width: 100%;
-  padding: 80px 60px;
-  background: #0b0f1a;
-  color: #e5e7eb;
+  display: none;
+  animation: fade 0.6s ease-in-out;
 }
 
-.slide-content {
-  max-width: 800px;
+.slide.active {
+  display: block;
 }
 
-.slide-content h2 {
-  font-size: 2.4rem;
+.slide h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.quote {
+  font-style: italic;
+  opacity: 0.9;
   margin-bottom: 20px;
 }
 
-.slide-content p,
-.slide-content li {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 16px;
+.slide ul {
+  margin-left: 20px;
 }
 
-.slide-content ul {
-  margin: 20px 0;
-  padding-left: 20px;
+.slide ul li {
+  margin-bottom: 10px;
 }
 
-.image-slide {
-  background: url("images/everyday-heroes.jpg") center/cover no-repeat;
-  position: relative;
-}
-
-.image-slide .overlay {
+/* NAV ARROWS – CLICKABLE FIX */
+.nav {
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 12px 18px;
+  cursor: pointer;
+  z-index: 100; /* 🔥 CRITICAL */
+  pointer-events: auto; /* 🔥 CRITICAL */
 }
 
-.image-slide .slide-content {
-  position: relative;
-  z-index: 2;
+.nav:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.light {
-  color: #ffffff;
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 /* Navigation */
@@ -307,64 +324,55 @@
 <section id="stories">
     <h2>📖 Stories of Insaniyat</h2>
 
-    <section class="story-slider">
-  <div class="slides">
+    <section class="stories-slider">
+  <h2>Stories of Insaniyat</h2>
 
+  <div class="slider-container">
     <!-- Slide 1 -->
     <div class="slide active">
-      <div class="slide-content">
-        <h2>Story of Insaniyat</h2>
-        <p>
-          <em>“My grandfather once told me:<br>
-          Never let anyone leave your home empty-handed if they come seeking help.”</em>
-        </p>
+      <h3>Story of Insaniyat</h3>
+      <p class="quote">
+        “My grandfather once told me:<br>
+        Never let anyone leave your home empty-handed if they come seeking help.”
+      </p>
 
-        <p>
-          Not everyone comes asking for money.<br>
-          Some need care.<br>
-          Some need guidance.<br>
-          Some need advice, time, or simply to be heard.
-        </p>
+      <p>
+        Not everyone comes asking for money.<br>
+        Some need care.<br>
+        Some need guidance.<br>
+        Some need advice, time, or simply to be heard.
+      </p>
 
-        <p>
-          Helping doesn’t always require wealth.<br>
-          It requires intent, empathy, and the courage to care.
-        </p>
+      <p>
+        Helping doesn’t always require wealth.<br>
+        It requires intent, empathy, and the courage to care.
+      </p>
 
-        <strong>Let’s choose Insaniyat — being human, always.</strong>
-      </div>
+      <strong>Let’s choose Insaniyat — being human, always.</strong>
     </div>
 
     <!-- Slide 2 -->
-    <div class="slide image-slide">
-      <div class="overlay"></div>
-      <div class="slide-content light">
-        <h2>Our Everyday Heroes</h2>
-        <p>
-          They don’t wear capes.<br>
-          They don’t seek applause.<br>
-          Yet they quietly make the world better — every day.
-        </p>
+    <div class="slide">
+      <h3>Our Everyday Heroes</h3>
 
-        <ul>
-          <li>Delivery workers helping elders</li>
-          <li>Teachers believing in children</li>
-          <li>Healthcare workers beyond duty</li>
-          <li>Strangers standing up for what’s right</li>
-        </ul>
+      <ul>
+        <li>The delivery worker who helps an elderly person with a smile</li>
+        <li>The teacher who believes in a child when no one else does</li>
+        <li>The healthcare worker who shows compassion beyond duty</li>
+        <li>The stranger who stands up for what’s right</li>
+      </ul>
 
-        <strong>
-          People before profit.<br>
-          Humanity before everything.
-        </strong>
-      </div>
+      <p>
+        <strong>People before profit.<br>
+        Values before titles.<br>
+        Humanity before everything.</strong>
+      </p>
     </div>
 
+    <!-- Arrows -->
+    <button class="nav prev" onclick="changeSlide(-1)">❮</button>
+    <button class="nav next" onclick="changeSlide(1)">❯</button>
   </div>
-
-  <!-- Navigation -->
-  <button class="nav prev">‹</button>
-  <button class="nav next">›</button>
 </section>
 </section>
 <section>
@@ -416,14 +424,28 @@
     }
 </script>
 <script>
-let currentStory = 0;
-const stories = document.querySelectorAll('.story-slide');
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
 
-function changeStory(direction){
-    stories[currentStory].classList.remove('active');
-    currentStory = (currentStory + direction + stories.length) % stories.length;
-    stories[currentStory].classList.add('active');
-}
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function changeSlide(direction) {
+    currentSlide += direction;
+
+    if (currentSlide < 0) {
+      currentSlide = slides.length - 1;
+    } else if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+  }
+
+  // Init
+  showSlide(currentSlide);
 </script>
 </body>
 </html>
