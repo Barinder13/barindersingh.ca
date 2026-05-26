@@ -167,6 +167,61 @@
             font-size: 0.9rem;
             opacity: 0.8;
         }
+        /* STORIES SLIDER */
+.story-slider{
+    position:relative;
+    max-width:1000px;
+    margin:40px auto 0;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    background:rgba(255,255,255,0.05);
+}
+
+.story-slide{
+    display:none;
+    position:relative;
+}
+
+.story-slide.active{
+    display:block;
+}
+
+.story-slide img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+}
+
+.story-caption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(to top, rgba(0,0,0,.75), transparent);
+    color:#f8fafc;
+    font-size:1.05rem;
+}
+
+.story-nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.6);
+    color:#fbbf24;
+    border:none;
+    font-size:1.8rem;
+    padding:10px 14px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.story-nav:hover{
+    background:#000;
+}
+
+.story-nav.prev{left:15px}
+.story-nav.next{right:15px}
         
     </style>
 </head>
@@ -222,7 +277,38 @@
         </div>
     </div>
 </section>
+<section id="stories">
+    <h2>📖 Stories of Insaniyat</h2>
+    <p style="max-width:800px;margin:0 auto 40px;text-align:center;">
+        Real moments. Real people. Small acts of kindness that created lasting impact.
+    </p>
 
+    <div class="story-slider">
+        <div class="story-slide active">
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d" alt="Story 1">
+            <div class="story-caption">
+                A smile shared during a community food drive reminded us that dignity matters.
+            </div>
+        </div>
+
+        <div class="story-slide">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Story 2">
+            <div class="story-caption">
+                Volunteers working together proved that unity is stronger than differences.
+            </div>
+        </div>
+
+        <div class="story-slide">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Story 3">
+            <div class="story-caption">
+                Hope often begins with a single step forward, even on the longest road.
+            </div>
+        </div>
+
+        <button class="story-nav prev" onclick="changeStory(-1)">❮</button>
+        <button class="story-nav next" onclick="changeStory(1)">❯</button>
+    </div>
+</section>
 <section>
     <h2>💛 Our Belief</h2>
     <p>
@@ -271,6 +357,15 @@
         document.body.classList.toggle("light");
     }
 </script>
+<script>
+let currentStory = 0;
+const stories = document.querySelectorAll('.story-slide');
 
+function changeStory(direction){
+    stories[currentStory].classList.remove('active');
+    currentStory = (currentStory + direction + stories.length) % stories.length;
+    stories[currentStory].classList.add('active');
+}
+</script>
 </body>
 </html>
