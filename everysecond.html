@@ -211,6 +211,52 @@ body.light .form-wrapper {
     border: none;
     border-radius: 16px;
 }
+        #everysecond-slider {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.slider-card {
+  position: relative;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 60px 80px;
+  min-height: 280px;
+}
+
+.story-content h2 {
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.story-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+@media (max-width: 768px) {
+  .slider-card {
+    padding: 50px 25px;
+  }
+}
     </style>
 </head>
 
@@ -285,7 +331,31 @@ body.light .form-wrapper {
     <button class="nav next" onclick="nextStory()">›</button>
   </div>
 </section>
-    <script>
+    
+    <section class="time-form">
+    <h2>📝 Share How You Value Time</h2>
+    <p class="form-intro">
+        Every second matters. Tell us how you use your time — in life, work, or personal growth.
+        Your story may inspire others to live with intention.
+    </p>
+
+    <div class="form-wrapper">
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSenQofxylKFi6Aof9aVBCY6niIDZZGTP0a09jCkWcb7Kao4fw/viewform?usp=publish-editor"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            loading="lazy">
+            Loading…
+        </iframe>
+    </div>
+</section>
+    
+<footer>
+    © 2026 • Every Second Matters — An Insaniyat Initiative
+</footer>
+
+<script>
 const everySecondStories = [
 
 {
@@ -489,30 +559,6 @@ const everySecondStories = [
 
 ];
 </script>
-    <section class="time-form">
-    <h2>📝 Share How You Value Time</h2>
-    <p class="form-intro">
-        Every second matters. Tell us how you use your time — in life, work, or personal growth.
-        Your story may inspire others to live with intention.
-    </p>
-
-    <div class="form-wrapper">
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSenQofxylKFi6Aof9aVBCY6niIDZZGTP0a09jCkWcb7Kao4fw/viewform?usp=publish-editor"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            loading="lazy">
-            Loading…
-        </iframe>
-    </div>
-</section>
-    
-<footer>
-    © 2026 • Every Second Matters — An Insaniyat Initiative
-</footer>
-
-
 
 </body>
 </html>
