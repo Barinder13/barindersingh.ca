@@ -558,6 +558,28 @@ const everySecondStories = [
 }
 
 ];
+    let currentIndex = 0;
+
+function renderStory() {
+  document.getElementById("story-title").innerHTML =
+    everySecondStories[currentIndex].title;
+
+  document.getElementById("story-text").innerHTML =
+    everySecondStories[currentIndex].content;
+}
+
+function nextStory() {
+  currentIndex = (currentIndex + 1) % everySecondStories.length;
+  renderStory();
+}
+
+function prevStory() {
+  currentIndex =
+    (currentIndex - 1 + everySecondStories.length) % everySecondStories.length;
+  renderStory();
+}
+
+document.addEventListener("DOMContentLoaded", renderStory);
 </script>
 
 </body>
