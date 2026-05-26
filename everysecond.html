@@ -176,70 +176,7 @@ function toggleTheme(){
   document.body.classList.toggle("light");
 }
 
-const everySecondStories=[{title:"Persistence Over Impossible", content: "If something didn’t work out, it doesn’t always mean it’s impossible.
-  It might just mean the effort wasn’t enough.
-
-  Success often hides behind persistence, consistency, and pushing a little further than you think you can.
-
-  Before calling it impossible, ask yourself:
-  Did I truly give it everything?
-
-  Keep going. Adjust. Try again. Every second counts."},
-{title:"We Discover Meaning",content:"We don’t create the meaning of our life — we discover it.
-
-  Meaning reveals itself through our choices, struggles, and responses.
-  Every phase reshapes our “why.”
-
-  When fear loosens and presence grows, clarity appears.
-
-  <ul>
-    <li>Every second is an opportunity</li>
-    <li>Every decision defines us</li>
-    <li>Every moment holds meaning</li>
-  </ul>
-
-  What matters is the side we choose — again and again."},{title:"Move More, Sit Less",content:"A lot of sitting will age you — faster than you think. ⏳
-
-  Sedentary life impacts energy, health, and longevity.
-
-  Small habits create big change:
-  <ul>
-    <li>Walk daily — even 20 minutes</li>
-    <li>Take stairs</li>
-    <li>Reduce screen time</li>
-    <li>Eat real food</li>
-    <li>Sleep better</li>
-    <li>Move, play, connect</li>
-  </ul>
-
-  Longevity is built every second."},{title:"Every Second Has Value",content:"Time is the one thing we all share — yet use differently.
-
-  Growth, progress, and purpose are built one moment at a time.
-
-  Respect time.
-  Use it wisely.
-
-  Because the worth of time is priceless."},{title:"Your Inner Dialogue",content:"Whom do you talk to the most every day?
-
-  👉 Yourself.
-
-  The quality of your inner dialogue shapes your confidence and outcomes.
-
-  Productivity doesn’t start with tools —
-  It starts with mindset.
-
-  What you repeat every second becomes your reality."}
-    {title:"In the rush of life, we chase what’s next.
-
-  But peace comes from pausing and appreciating what’s already here.
-
-  Be thankful.
-  Be present.
-  Feel light.
-
-  Make it a habit.
-  Every second counts."}
-    ];
+const everySecondStories=[{title:"Persistence Over Impossible",content:"If something didn’t work out, it doesn’t mean it’s impossible. Keep going. Every second counts."},{title:"We Discover Meaning",content:"Meaning is discovered through choices and struggles."},{title:"Move More, Sit Less",content:"Small habits shape longevity."},{title:"Every Second Has Value",content:"Time is priceless when used intentionally."},{title:"Your Inner Dialogue",content:"The voice you repeat shapes your life."}];
 
 let currentIndex=0;
 function renderStory(){
@@ -250,6 +187,7 @@ function nextStory(){currentIndex=(currentIndex+1)%everySecondStories.length;ren
 function prevStory(){currentIndex=(currentIndex-1+everySecondStories.length)%everySecondStories.length;renderStory();}
 document.addEventListener("DOMContentLoaded",renderStory);
 </script>
+
 
 </body>
 </html>
